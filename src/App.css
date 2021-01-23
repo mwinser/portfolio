@@ -137,6 +137,7 @@ nav ul li:hover {
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
   width: 100%;
+  background-size: cover;
   
 }
 #improv {
@@ -232,13 +233,11 @@ nav i {
         font-size: 1.4em;
         line-height: 1.5em;
 	}
-    #projects{
-     margin: 3em;
-	}
-    .project-tile{
-     font-size: 2em;
-	}
-    
+    .project-tile {
+      height: 350px;
+      width: 350px;
+      font-size: 1.2em;
+    }
 
 
 }
