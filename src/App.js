@@ -4,7 +4,7 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
-import profilePic from './Profile.jpg'
+
 
 
 
@@ -72,8 +72,7 @@ class Projects extends React.Component{
       <div className="project-desc">
         <h3>Improv App</h3>
         <p>A suggestion generator for the Blue Door Theatre</p>
-        <a href="#">link</a>
-        <a href="#">github</a>
+
       </div>
     </div>
     <div className="project-tile" >
@@ -81,8 +80,7 @@ class Projects extends React.Component{
       <div className="project-desc">
         <h3>Landing Page</h3>
         <p>Personal landing page project to work on responsive design</p>
-        <a href="#">link</a>
-        <a href="#">github</a>
+
       </div>
     </div>
 
@@ -91,8 +89,7 @@ class Projects extends React.Component{
       <div className="project-desc">
         <h3>Data Visualization</h3>
         <p>Personal data visualization project using D3</p>
-        <a href="#">link</a>
-        <a href="#">github</a>
+
       </div>
     </div>
     {/* <div className="project-tile">
