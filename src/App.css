@@ -1,0 +1,244 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+* {box-sizing: border-box}
+
+html, body{
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+}
+p{
+  font-size: 1em;
+  font-family: 'Nunito', sans-serif;
+}
+nav{
+  background-color: rgba(15,14,38,1);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #CCC;
+  align-items: center;
+}
+#titlebar{
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: .5em;
+  padding-left: 1em;
+
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+nav i {
+    font-size: 1.5em;
+    padding-right: .5em;
+}
+
+nav ul {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background: rgba(15,14,38,1);
+    margin: 0;
+    padding-left: 0;
+    display: none;
+    flex-direction: column;
+    z-index: 1;
+    transition: all .3s;
+}
+nav ul.nav-open{
+    display: flex;
+}
+nav ul i {
+    font-size: 2em;
+    padding: 1em;
+}
+nav ul i:hover {
+    cursor: pointer;
+    }
+nav ul li {
+    font-size: 1.5em;
+    width: 100%;
+    padding: 1em;
+    display: grid;
+    align-items: center;
+}
+nav ul li:hover {
+    background: rgba(37, 35, 94,1);
+    cursor: pointer;
+}
+
+#img-frame{
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: 90% 0;
+    background-image:url('Profile.jpg');
+    border-radius: 50%;
+    margin: auto;
+
+}
+
+.primary-section{
+  position: absolute;
+  color: #4c4c4c;
+  border-radius: 30px;
+  padding: 2em;
+
+  display: flex;
+  place-content: center;
+}
+
+#links {
+    text-align: center;
+}
+
+
+#projects{
+  font-size: 1em;
+  margin-top: 2em;
+  color: #4c4c4c;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  flex-wrap: wrap;
+  
+}
+.project-tile{
+  padding: 0;
+  height: 250px;
+  width: 250px;
+  margin: 2em;
+  border-radius: 2em;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.1);
+  background: rgba(15,14,38,1);
+  color: white;
+  transition: .2s ease-out;
+  position: relative;
+  
+}
+.project-tile:hover{
+  transform: scale(1.1);
+  transition: .2s ease-out;
+}
+
+.project-img {
+  background: gray;
+  height: 60%;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  width: 100%;
+  
+}
+#improv {
+  background: url("https://d33wubrfki0l68.cloudfront.net/600b6bf3dc82370007cff818/screenshot.png");
+  background-size: cover;
+  
+}
+#bats {
+  background: url("https://assets.codepen.io/5166947/internal/screenshots/pens/XWKbapp.default.png?fit=cover&format=auto&ha=true&height=540&quality=75&v=2&version=1609729930&width=960");
+  background-size: cover;
+}
+#usa {
+  background: url("https://assets.codepen.io/5166947/internal/screenshots/pens/XWKOxpv.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1605745655&width=960");
+  background-size: cover;
+}
+
+.project-desc {
+  padding: 0 1em;
+  font-size: .9em;
+
+
+}
+.project-desc h3 {
+  margin: .5em 0;
+}
+.project-desc p {
+  margin-top: .5em;
+}
+
+#profile-pic {
+    background-image: "../Profile.jpg"
+}
+.text-tile{
+  font-size: 1em;
+  line-height: 1.6em;
+  padding: 1em;
+
+}
+.text-tile h1{
+    font-size: 1.5em;
+    line-height: 1.1em;
+}
+.text-tile p{
+    margin-bottom: 1.5em;
+}
+.text-tile a {
+    font-size: 2em;
+    padding: .5em;
+    color: #4c4c4c;
+    text-align: center;
+}
+ul {
+  text-align: left;
+}
+
+@media (min-width:550px){
+
+nav ul {
+    list-style: none;
+    position: relative;
+    top: unset;
+    right: unset;
+    width: unset;
+    height: unset;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    font-size: .7em;
+
+}
+nav ul.nav-open{
+    display: flex;
+}
+nav ul li {
+    width: auto;
+}
+nav i {
+    display: none;
+}
+
+}
+
+@media (min-width: 900px){
+
+    .primary-section{
+     padding: 5em;
+	}
+    .text-tile h1{
+        font-size: 2em;
+        margin-bottom:2em;
+	}
+    .text-tile p{
+        font-size: 1.4em;
+        line-height: 1.5em;
+	}
+    #projects{
+     margin: 3em;
+	}
+    .project-tile{
+     font-size: 2em;
+	}
+    
+
+
+}
