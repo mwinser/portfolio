@@ -3,7 +3,7 @@ import './App.css';
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faTwitter, faGithub, faCodepen} from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -67,31 +67,37 @@ class Projects extends React.Component{
   render(){
     return( <div>
   <section id="projects">
-    <div className="project-tile" >
-      <div className="project-img" id="improv"></div>
-      <div className="project-desc">
-        <h3>Improv App</h3>
-        <p>A suggestion generator for the Blue Door Theatre</p>
+    <a href="https://bdt-improv.netlify.app/">
+      <div className="project-tile" >
+        <div className="project-img" id="improv">
+        </div>
+        <div className="project-desc">
+          <h3>Improv App</h3>
+          <p>A suggestion generator for the Blue Door Theatre</p>
 
+        </div>
       </div>
-    </div>
-    <div className="project-tile" >
-      <div className="project-img" id="bats"></div>
-      <div className="project-desc">
-        <h3>Landing Page</h3>
-        <p>Personal landing page project to work on responsive design</p>
+    </a> 
+    <a href="https://codepen.io/winserm/full/XWKbapp">
+      <div className="project-tile" >
+        <div className="project-img" id="bats"></div>
+        <div className="project-desc">
+          <h3>Landing Page</h3>
+          <p>Personal landing page project to work on responsive design</p>
 
+        </div>
       </div>
-    </div>
+    </a>
+    <a href="https://codepen.io/winserm/full/XWKOxpv">
+      <div className="project-tile" >
+        <div className="project-img" id="usa"></div>
+        <div className="project-desc">
+          <h3>Data Visualization</h3>
+          <p>Personal data visualization project using D3</p>
 
-    <div className="project-tile" >
-      <div className="project-img" id="usa"></div>
-      <div className="project-desc">
-        <h3>Data Visualization</h3>
-        <p>Personal data visualization project using D3</p>
-
+        </div>
       </div>
-    </div>
+    </a>
     {/* <div className="project-tile">
       <a href="https://simmer.io/@WinserWorks">Unity projects</a>
       
@@ -116,6 +122,7 @@ class Welcome extends React.Component{
           
                     <a href="https://twitter.com/winsaurus"><FontAwesomeIcon icon={faTwitter} /></a> 
                     <a href="https://linkedin.com/in/mwinser"><FontAwesomeIcon icon={faLinkedin} /></a>
+                    <a href="https://codepen.io/winserm"><FontAwesomeIcon icon={faCodepen} /></a>
                 </div>
             </div>
           
