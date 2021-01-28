@@ -44,18 +44,23 @@ nav ul {
     position: absolute;
     top: 0;
     right: 0;
+    transform: translateX(300px);
     width: 50%;
     height: 100vh;
     background: rgba(15,14,38,1);
     margin: 0;
     padding-left: 0;
-    display: none;
+    display: flex;
+    opacity: 0;
     flex-direction: column;
     z-index: 1;
     transition: all .3s;
+    transition: transform .5s;
 }
 nav ul.nav-open{
-    display: flex;
+    transform: translateX(0);
+    opacity: 1;
+
 }
 nav ul i {
     font-size: 2em;
@@ -88,7 +93,7 @@ nav ul li:hover {
 }
 
 .primary-section{
-  position: absolute;
+
   color: #4c4c4c;
   border-radius: 30px;
   padding: 2em;
@@ -205,6 +210,8 @@ nav ul {
     display: flex;
     flex-direction: row;
     font-size: .7em;
+    transform: translateX(0);
+    opacity: 1;
 
 }
 nav ul.nav-open{
