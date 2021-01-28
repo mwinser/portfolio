@@ -8,6 +8,7 @@
 html, body{
   background-color: white;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 p{
   font-size: 1em;
@@ -42,6 +43,7 @@ nav i {
 nav ul {
     list-style: none;
     position: absolute;
+    display: flex;
     top: 0;
     right: 0;
     transform: translateX(300px);
@@ -50,16 +52,16 @@ nav ul {
     background: rgba(15,14,38,1);
     margin: 0;
     padding-left: 0;
-    display: flex;
     opacity: 0;
     flex-direction: column;
     z-index: 1;
-    transition: all .3s;
     transition: transform .5s;
 }
 nav ul.nav-open{
-    transform: translateX(0);
+  transform: translateX(0);
     opacity: 1;
+
+
 
 }
 nav ul i {
@@ -197,7 +199,7 @@ ul {
   text-align: left;
 }
 
-@media (min-width:550px){
+@media (min-width:600px){
 
 nav ul {
     list-style: none;
