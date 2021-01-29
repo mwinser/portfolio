@@ -10,13 +10,16 @@ html, body{
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
+body{
+  position: relative;
+}
 p{
   font-size: 1em;
   font-family: 'Nunito', sans-serif;
 }
 nav{
   background-color: rgba(15,14,38,1);
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   color: #CCC;
@@ -48,7 +51,6 @@ nav ul {
     right: 0;
     transform: translateX(300px);
     width: 50%;
-    height: 100vh;
     background: rgba(15,14,38,1);
     margin: 0;
     padding-left: 0;
