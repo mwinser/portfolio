@@ -84,6 +84,9 @@ nav ul li:hover {
     background: rgba(37, 35, 94,1);
     cursor: pointer;
 }
+.current {
+  text-decoration: underline;
+}
 
 #img-frame{
     width: 150px;

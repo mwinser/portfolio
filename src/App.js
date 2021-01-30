@@ -51,10 +51,10 @@ class App extends React.Component{
 
       <ul className= {this.state.menuOpen ? 'nav-open': null}>
         <i onClick={()=>this.toggleMenu()}><FontAwesomeIcon icon={faTimes} /></i>
-        <li className="navlink" onClick={()=>this.changeTab("Welcome")}>Welcome</li>
-        <li className="navlink" onClick={()=>this.changeTab("Projects")}>Projects</li>
-        <li className="navlink" onClick={()=>this.changeTab("About Me")}>About Me</li>
-        <li className="navlink" onClick={()=>this.changeTab("Contact")}>Contact</li>
+        <li className={this.state.tab==="Welcome"?"navlink current":"navlink"} onClick={()=>this.changeTab("Welcome")}>Welcome</li>
+        <li className={this.state.tab==="Projects"?"navlink current":"navlink"} onClick={()=>this.changeTab("Projects")}>Projects</li>
+        <li className={this.state.tab==="About Me"?"navlink current":"navlink"} onClick={()=>this.changeTab("About Me")}>About Me</li>
+        <li className={this.state.tab==="Contact"?"navlink current":"navlink"} onClick={()=>this.changeTab("Contact")}>Contact</li>
       </ul>
   </nav>
 
