@@ -9,22 +9,15 @@ import { faLinkedin, faTwitter, faGithub, faCodepen} from '@fortawesome/free-bra
 
 
 class App extends React.Component{
-  constructor(props){
-    super(props);
-    this.state={
-      tab: "Welcome",
-      menuOpen: false
-      };
-    this.changeTab = this.changeTab.bind(this);
-    this.toggleMenu = this.toggleMenu.bind(this);
+
+state = 
+  {
+  tab: "Welcome",
+  menuOpen: false
   }
-  changeTab(input){
-    this.setState({tab: input,menuOpen: false});
-   
-  }
-  toggleMenu(){
-    this.setState({menuOpen: !this.state.menuOpen});
-  }
+
+  changeTab = (input)=>this.setState({tab: input,menuOpen: false})
+  toggleMenu = ()=>this.setState({menuOpen: !this.state.menuOpen})
   render(){
   let tab;
     switch(this.state.tab){
@@ -44,28 +37,31 @@ class App extends React.Component{
         tab = <Error/>;
     
     }
-  return(<div>
+  return(
+    <div>
       <nav >
-      <div id="titlebar">mwinser.com</div>
-      <i onClick={()=>this.toggleMenu()}><FontAwesomeIcon icon={faBars} /></i>
-
-      <ul className= {this.state.menuOpen ? 'nav-open': null}>
-        <i onClick={()=>this.toggleMenu()}><FontAwesomeIcon icon={faTimes} /></i>
-        <li className={this.state.tab==="Welcome"?"navlink current":"navlink"} onClick={()=>this.changeTab("Welcome")}>Welcome</li>
-        <li className={this.state.tab==="Projects"?"navlink current":"navlink"} onClick={()=>this.changeTab("Projects")}>Projects</li>
-        <li className={this.state.tab==="About Me"?"navlink current":"navlink"} onClick={()=>this.changeTab("About Me")}>About Me</li>
-        <li className={this.state.tab==="Contact"?"navlink current":"navlink"} onClick={()=>this.changeTab("Contact")}>Contact</li>
-      </ul>
-  </nav>
-
-    <main>
-      {tab}
-      </main></div>)}
+        <div id="titlebar">mwinser.com
+        </div>
+        <i onClick={()=>this.toggleMenu()}><FontAwesomeIcon icon={faBars} /></i>
+        <ul className= {this.state.menuOpen ? 'nav-open': null}>
+          <i onClick={()=>this.toggleMenu()}><FontAwesomeIcon icon={faTimes} /></i>
+          <li className={this.state.tab==="Welcome"?"navlink current":"navlink"} onClick={()=>this.changeTab("Welcome")}>Welcome</li>
+          <li className={this.state.tab==="Projects"?"navlink current":"navlink"} onClick={()=>this.changeTab("Projects")}>Projects</li>
+          <li className={this.state.tab==="About Me"?"navlink current":"navlink"} onClick={()=>this.changeTab("About Me")}>About Me</li>
+          <li className={this.state.tab==="Contact"?"navlink current":"navlink"} onClick={()=>this.changeTab("Contact")}>Contact</li>
+        </ul>
+      </nav>
+      <main>
+        {tab}
+      </main>
+    </div>
+  )
+}
 }
 
 class Projects extends React.Component{
   render(){
-    return( <div>
+    return(
   <section id="projects">
     <a href="https://bdt-improv.netlify.app/">
       <div className="project-tile" >
@@ -106,60 +102,73 @@ class Projects extends React.Component{
     </div> */}
     
 
-  </section></div>)
+  </section>)
   }
 }
 class Welcome extends React.Component{
   render(){
-    return( <section className="primary-section">
-
-
-        <div id="profile-container" >
-            <div id="img-frame"></div>
-            <div className="text-tile"><h1>Hi there! I'm Mike Winser.</h1><p>I'm a Spokane-based problem solver and maker-of-stuff. This site displays some of my work.</p><p> I'm always learning new things, so check back in soon!</p>
-                <div id="links">
-                    <a href="https://github.com/mwinser" ><FontAwesomeIcon icon={faGithub} /></a>
-          
-                    <a href="https://twitter.com/winsaurus"><FontAwesomeIcon icon={faTwitter} /></a> 
-                    <a href="https://linkedin.com/in/mwinser"><FontAwesomeIcon icon={faLinkedin} /></a>
-                    <a href="https://codepen.io/winserm"><FontAwesomeIcon icon={faCodepen} /></a>
-                </div>
+    return( 
+    <section className="primary-section">
+      <div id="profile-container" >
+        <div id="img-frame"></div>
+          <div className="text-tile"><h1>Hi there! I'm Mike Winser.</h1><p>I'm a Spokane-based problem solver and maker-of-stuff. This site displays some of my work.</p><p> I'm always learning new things, so check back in soon!</p>
+            <div id="links">
+              <a href="https://github.com/mwinser" ><FontAwesomeIcon icon={faGithub} /></a>
+              <a href="https://twitter.com/winsaurus"><FontAwesomeIcon icon={faTwitter} /></a> 
+              <a href="https://linkedin.com/in/mwinser"><FontAwesomeIcon icon={faLinkedin} /></a>
+              <a href="https://codepen.io/winserm"><FontAwesomeIcon icon={faCodepen} /></a>
             </div>
-          
-          
+          </div>
         </div>
-        
-
-          
-          
-          
-          </section>)
+    </section>
+    )
   }
 }
 class AboutMe extends React.Component{
   render(){
-    return( <section className="primary-section">
-        <div className="text-tile"><h1>About Me</h1>
-        <p>I'm a former Sleep Scientist (yes, that is a thing) and I currently work as a polysomnographer in clinical sleep medicine in beautiful Spokane, WA.</p>
-        <p>In October 2020, I began seriously learning web development with freeCodeCamp and have created this website to show off some of my work. 
-        I've always loved solving problems and making stuff.</p>
-        <p>Here are some of the technologies I use:</p>
-          <ul><li>HTML, CSS, Javascript, Bootstrap and React</li><li>Node.js, express, MongoDB and Mongoose</li><li>C#, Unity and Python</li><li>FruityLoops</li></ul></div>
-        </section>
-)
+    return(
+      <section className="primary-section">
+        <div className="text-tile">
+          <h1>About Me</h1>
+          <p>I'm a former Sleep Scientist (yes, that is a thing) and I currently work as a polysomnographer in clinical sleep medicine in beautiful Spokane, WA.
+          </p>
+          <p>In October 2020, I began seriously learning web development with freeCodeCamp and have created this website to show off some of my work. 
+          I've always loved solving problems and making stuff.
+          </p>
+          <p>Here are some of the technologies I use:
+          </p>
+          <ul>
+            <li>HTML, CSS, Javascript, Bootstrap and React</li>
+            <li>Node.js, express, MongoDB and Mongoose</li>
+            <li>C#, Unity and Python</li>
+            <li>FruityLoops</li>
+          </ul>
+        </div>
+      </section>
+    )
   }
 }
 class Contact extends React.Component{
   render(){
-    return( <section className="primary-section">
-        <div className="text-tile"><h1>Contact</h1><p>Have a question, comment, or interested in hiring me?</p><p> Gmail me at <b>mike.winser</b></p></div>
-        </section>)
+    return( 
+      <section className="primary-section">
+        <div className="text-tile">
+          <h1>Contact</h1>
+          <p>Have a question, comment, or interested in hiring me?</p>
+          <p> Gmail me at <b>mike.winser</b></p>
+        </div>
+      </section>
+    )
   }
 }
 class Error extends React.Component{
   render(){
-    return( <section className="primary-section">
-        <div className="text-tile">Oh Geez. There's been an error. How <strong>embarassing</strong>.</div></section>)
+    return( 
+      <section className="primary-section">
+        <div className="text-tile">Oh Geez. There's been an error. How <strong>embarassing</strong>.
+        </div>
+      </section>
+    )
   }
 }
 
