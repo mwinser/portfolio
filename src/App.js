@@ -17,7 +17,9 @@ state =
   }
 
   changeTab = (input)=>this.setState({tab: input,menuOpen: false})
+
   toggleMenu = ()=>this.setState({menuOpen: !this.state.menuOpen})
+  
   render(){
   let tab;
     switch(this.state.tab){
