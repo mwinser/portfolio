@@ -1,6 +1,6 @@
 
 import './App.css';
-import React from "react";
+import React, {useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faTwitter, faGithub, faCodepen} from '@fortawesome/free-brands-svg-icons';
@@ -8,21 +8,22 @@ import { faLinkedin, faTwitter, faGithub, faCodepen} from '@fortawesome/free-bra
 
 
 
-class App extends React.Component{
+function App () {
 
-state = 
-  {
-  tab: "Welcome",
-  menuOpen: false
+  const [tabName, setTabName] = useState("Welcome")
+  const [isMenuOpen, setIsMenuOpen]= useState(false)
+
+  function changeTab(input){
+    setTabName(input)
+    setIsMenuOpen(false)
   }
 
-  changeTab = (input)=>this.setState({tab: input,menuOpen: false})
+  function toggleMenu() {
+    setIsMenuOpen(prevIsMenuOpen=>!prevIsMenuOpen)
+  }
 
-  toggleMenu = ()=>this.setState({menuOpen: !this.state.menuOpen})
-  
-  render(){
   let tab;
-    switch(this.state.tab){
+    switch(tabName){
       case "Welcome":
         tab = <Welcome/>;
         break;
@@ -38,19 +39,18 @@ state =
       default:
         tab = <Error/>;
     
-    }
+  }
   return(
     <div>
       <nav >
-        <div id="titlebar">mwinser.com
-        </div>
-        <i onClick={()=>this.toggleMenu()}><FontAwesomeIcon icon={faBars} /></i>
-        <ul className= {this.state.menuOpen ? 'nav-open': null}>
-          <i onClick={()=>this.toggleMenu()}><FontAwesomeIcon icon={faTimes} /></i>
-          <li className={this.state.tab==="Welcome"?"navlink current":"navlink"} onClick={()=>this.changeTab("Welcome")}>Welcome</li>
-          <li className={this.state.tab==="Projects"?"navlink current":"navlink"} onClick={()=>this.changeTab("Projects")}>Projects</li>
-          <li className={this.state.tab==="About Me"?"navlink current":"navlink"} onClick={()=>this.changeTab("About Me")}>About Me</li>
-          <li className={this.state.tab==="Contact"?"navlink current":"navlink"} onClick={()=>this.changeTab("Contact")}>Contact</li>
+        <div id="titlebar">mwinser.com</div>
+        <i onClick={()=>toggleMenu()}><FontAwesomeIcon icon={faBars} /></i>
+        <ul className= {isMenuOpen ? 'nav-open': null}>
+          <i onClick={()=>toggleMenu()}><FontAwesomeIcon icon={faTimes} /></i>
+          <li className={tab==="Welcome"?"navlink current":"navlink"} onClick={()=>changeTab("Welcome")}>Welcome</li>
+          <li className={tab==="Projects"?"navlink current":"navlink"} onClick={()=>changeTab("Projects")}>Projects</li>
+          <li className={tab==="About Me"?"navlink current":"navlink"} onClick={()=>changeTab("About Me")}>About Me</li>
+          <li className={tab==="Contact"?"navlink current":"navlink"} onClick={()=>changeTab("Contact")}>Contact</li>
         </ul>
       </nav>
       <main>
@@ -59,11 +59,9 @@ state =
     </div>
   )
 }
-}
 
-class Projects extends React.Component{
-  render(){
-    return(
+function Projects(){
+  return(
   <section id="projects">
     <a href="https://bdt-improv.netlify.app/">
       <div className="project-tile" >
@@ -106,9 +104,8 @@ class Projects extends React.Component{
 
   </section>)
   }
-}
-class Welcome extends React.Component{
-  render(){
+
+function Welcome (){
     return( 
     <section className="primary-section">
       <div id="profile-container" >
@@ -125,9 +122,9 @@ class Welcome extends React.Component{
     </section>
     )
   }
-}
-class AboutMe extends React.Component{
-  render(){
+
+function AboutMe() {
+
     return(
       <section className="primary-section">
         <div className="text-tile">
@@ -143,28 +140,33 @@ class AboutMe extends React.Component{
             <li>HTML, CSS, Javascript, Bootstrap and React</li>
             <li>Node.js, express, MongoDB and Mongoose</li>
             <li>C#, Unity and Python</li>
-            <li>FruityLoops</li>
           </ul>
         </div>
       </section>
     )
   }
-}
-class Contact extends React.Component{
-  render(){
+
+function Contact (){
+
     return( 
       <section className="primary-section">
         <div className="text-tile">
           <h1>Contact</h1>
           <p>Have a question, comment, or interested in hiring me?</p>
           <p> Gmail me at <b>mike.winser</b></p>
+          <div id="links">
+              <a href="https://github.com/mwinser" ><FontAwesomeIcon icon={faGithub} /></a>
+              <a href="https://twitter.com/winsaurus"><FontAwesomeIcon icon={faTwitter} /></a> 
+              <a href="https://linkedin.com/in/mwinser"><FontAwesomeIcon icon={faLinkedin} /></a>
+              <a href="https://codepen.io/winserm"><FontAwesomeIcon icon={faCodepen} /></a>
+            </div>
         </div>
       </section>
     )
   }
-}
-class Error extends React.Component{
-  render(){
+
+function Error() {
+
     return( 
       <section className="primary-section">
         <div className="text-tile">Oh Geez. There's been an error. How <strong>embarassing</strong>.
@@ -172,6 +174,6 @@ class Error extends React.Component{
       </section>
     )
   }
-}
+
 
 export default App;
