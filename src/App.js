@@ -5,8 +5,7 @@ import Projects from "./pages/projects"
 import Welcome from "./pages/welcome"
 import AboutMe from "./pages/aboutme"
 import Contact from "./pages/contact"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+
 
 function App () {
 
