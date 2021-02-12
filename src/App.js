@@ -26,10 +26,10 @@ function App () {
       <nav >
         <div id="titlebar">mwinser.com</div>
         <i onClick={()=>toggleMenu()}>
-          <svg id="ex" height="50" width="50">
-            <line class={isMenuOpen ? "ex top one" : "ex top"} x1="5" y1="25" x2="45" y2="25"  />
-            <line class={isMenuOpen ? "ex two" : "ex"} x1="5" y1="25" x2="45" y2="25" />
-            <line class={isMenuOpen ? "ex bottom three" : "ex bottom"} x1="5" y1="25" x2="45" y2="25" />
+          <svg id="ex" height="30" width="30">
+            <line class={isMenuOpen ? "ex top one" : "ex top"} x1="3" y1="15" x2="27" y2="15"  />
+            <line class={isMenuOpen ? "ex two" : "ex"} x1="3" y1="15" x2="27" y2="15" />
+            <line class={isMenuOpen ? "ex bottom three" : "ex bottom"} x1="3" y1="15" x2="27" y2="15" />
           </svg>
         </i>
         <ul className= {isMenuOpen ? 'nav-open': null}>

@@ -48,7 +48,7 @@ nav i {
 
 .ex {
   stroke:#CCC;
-  stroke-width:5;
+  stroke-width:3;
   stroke-linecap: round;
   transition: transform ease-in-out .5s;
   transform-origin: 50% 50%;
@@ -73,7 +73,7 @@ nav ul {
     list-style: none;
     position: absolute;
     display: flex;
-    top: 50px;
+    top: 47px;
     right: 0;
     transform: translateX(300px);
     width: 50%;
