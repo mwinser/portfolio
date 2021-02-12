@@ -26,9 +26,14 @@ function App () {
     <div>
       <nav >
         <div id="titlebar">mwinser.com</div>
-        <i onClick={()=>toggleMenu()}><FontAwesomeIcon icon={faBars} /></i>
+        <i onClick={()=>toggleMenu()}>
+          <svg id="ex" height="50" width="50">
+            <line class={isMenuOpen ? "ex top one" : "ex top"} x1="5" y1="25" x2="45" y2="25"  />
+            <line class={isMenuOpen ? "ex two" : "ex"} x1="5" y1="25" x2="45" y2="25" />
+            <line class={isMenuOpen ? "ex bottom three" : "ex bottom"} x1="5" y1="25" x2="45" y2="25" />
+          </svg>
+        </i>
         <ul className= {isMenuOpen ? 'nav-open': null}>
-          <i onClick={()=>toggleMenu()}><FontAwesomeIcon icon={faTimes} /></i>
           <li onClick={()=>changeTab(<Welcome/>)}>Welcome</li>
           <li onClick={()=>changeTab(<Projects/>)}>Projects</li>
           <li onClick={()=>changeTab(<AboutMe/>)}>About Me</li>

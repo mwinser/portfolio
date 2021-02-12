@@ -40,15 +40,40 @@ a{
 }
 
 nav i {
+    display: flex;
+    place-content: center;
     font-size: 1.5em;
     padding-right: .5em;
+}
+
+.ex {
+  stroke:#CCC;
+  stroke-width:5;
+  stroke-linecap: round;
+  transition: transform ease-in-out .5s;
+  transform-origin: 50% 50%;
+}
+.top {
+  transform: translateY(-25%)
+}
+.bottom {
+  transform: translateY(25%)
+}
+.one {
+  transform: rotate(45deg)  
+}
+.two {
+  transform: scaleX(.1)
+}
+.three {
+  transform: rotate(-45deg)
 }
 
 nav ul {
     list-style: none;
     position: absolute;
     display: flex;
-    top: 0;
+    top: 50px;
     right: 0;
     transform: translateX(300px);
     width: 50%;
@@ -224,22 +249,22 @@ nav i {
 
 @media (min-width: 900px){
 
-    .primary-section{
-     padding: 5em;
-	}
-    .text-tile h1{
-        font-size: 2em;
-        margin-bottom:2em;
-	}
-    .text-tile p{
-        font-size: 1.4em;
-        line-height: 1.5em;
-	}
-    .project-tile {
-      height: 350px;
-      width: 350px;
-      font-size: 1.2em;
-    }
+  .primary-section{
+    padding: 5em;
+  }
+  .text-tile h1{
+    font-size: 2em;
+    margin-bottom:2em;
+  }
+  .text-tile p{
+    font-size: 1.4em;
+    line-height: 1.5em;
+  }
+  .project-tile {
+    height: 350px;
+    width: 350px;
+    font-size: 1.2em;
+  }
 
 
 }
