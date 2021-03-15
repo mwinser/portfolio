@@ -153,7 +153,7 @@ nav ul li:hover {
 }
 .project-tile{
   padding: 0;
-  height: 250px;
+  height: 285px;
   width: 250px;
   margin: 2em;
   border-radius: 2em;
@@ -171,7 +171,6 @@ nav ul li:hover {
 
 .project-img {
   background: gray;
-  height: 60%;
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
   width: 100%;
