@@ -15,6 +15,7 @@ function Contact (){
               <a href="https://twitter.com/winsaurus"><FontAwesomeIcon icon={faTwitter} /></a> 
               <a href="https://linkedin.com/in/mwinser"><FontAwesomeIcon icon={faLinkedin} /></a>
               <a href="https://codepen.io/winserm"><FontAwesomeIcon icon={faCodepen} /></a>
+              <a href="https://replit.com/@mwinser"><img width="36px" style={{"vertical-align": "-0.15em"}} src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Repl.it_logo.svg" alt="replit logo"/></a>
             </div>
         </div>
       </section>
