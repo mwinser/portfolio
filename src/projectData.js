@@ -1,6 +1,7 @@
 import petals from "./petals-site.png"
 import castaways from "./castaways-site.png"
 import bumblr from "./bumblr.png"
+import bdt from "./bdt-site.webp"
 const projectData = [
     {
         name:"Tumblr Clone",
@@ -26,7 +27,7 @@ const projectData = [
     {
         name:"Improv App",
         description:"A suggestion generator for the Blue Door Theatre using vanilla javascript",
-        image:"https://d33wubrfki0l68.cloudfront.net/600b6bf3dc82370007cff818/screenshot.png",
+        image:bdt,
         link:"https://bdt-improv.netlify.app/" ,
         git: "https://github.com/mwinser/Improv-Suggestion-App"
     },

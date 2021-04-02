@@ -9,11 +9,11 @@ function Welcome (){
         <div id="img-frame"></div>
           <div className="text-tile"><h1>Hi there! I'm Mike Winser.</h1><p>I'm a Spokane-based web developer and maker-of-stuff. This site displays some of my work.</p><p> I'm always learning new things, so check back in soon!</p>
             <div id="links">
-              <a href="https://github.com/mwinser" ><FontAwesomeIcon icon={faGithub} /></a>
-              <a href="https://twitter.com/winsaurus"><FontAwesomeIcon icon={faTwitter} /></a> 
-              <a href="https://linkedin.com/in/mwinser"><FontAwesomeIcon icon={faLinkedin} /></a>
-              <a href="https://codepen.io/winserm"><FontAwesomeIcon icon={faCodepen} /></a>
-              <a href="https://replit.com/@mwinser"><img width="36px" style={{"vertical-align": "-0.15em"}} src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Repl.it_logo.svg" alt="replit logo"/></a>
+              <a href="https://github.com/mwinser" title="Github"><FontAwesomeIcon icon={faGithub} /></a>
+              <a href="https://twitter.com/winsaurus" title="Twitter"><FontAwesomeIcon icon={faTwitter} /></a> 
+              <a href="https://linkedin.com/in/mwinser"title="LinkedIn"><FontAwesomeIcon icon={faLinkedin} /></a>
+              <a href="https://codepen.io/winserm"title="Codepen"><FontAwesomeIcon icon={faCodepen} /></a>
+              <a href="https://replit.com/@mwinser"title="Replit"><img width="36px" style={{"vertical-align": "-0.15em"}} src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Repl.it_logo.svg" alt="replit logo"/></a>
             </div>
           </div>
         </div>

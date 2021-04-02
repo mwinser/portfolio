@@ -183,12 +183,15 @@ nav ul li:hover {
   font-size: .9rem;
 }
 .project-title {
+  font-size: 1.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 .25rem;
 
 }
 .project-title h3 {
+  font-size: 1.1rem;
   margin: .5rem 0;
 }
 .project-desc p {
