@@ -10,6 +10,7 @@ function Contact (){
           <h1>Contact</h1>
           <p>Have a question, comment, or interested in hiring me?</p>
           <p> Gmail me at <b>mike.winser</b></p>
+          <p>Or find me at one of the following:</p>
           <div id="links">
               <a href="https://github.com/mwinser" ><FontAwesomeIcon icon={faGithub} /></a>
               <a href="https://twitter.com/winsaurus"><FontAwesomeIcon icon={faTwitter} /></a> 
