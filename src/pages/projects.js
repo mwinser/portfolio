@@ -6,10 +6,10 @@ import {faLink} from '@fortawesome/free-solid-svg-icons'
 
 function Projects(){
 
-    const projectsListed = projectData.map(project =>(
+    const projectsListed = projectData.map((project, index) =>(
 
 
-        <div className="project-tile" >
+        <div key={index} className="project-tile" >
             <img className="project-img" src={project.image} alt={project.name + " screenshot"} />
             <div className="project-desc">
                 <div className="project-title">

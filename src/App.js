@@ -34,10 +34,10 @@ function App () {
           </svg>
         </i>
         <ul className= {isMenuOpen ? 'nav-open': null}>
-          <li className={tabName.type.name.slice(0,5)==='Welco' && 'current'} onClick={()=>changeTab(<Welcome/>)}>Welcome</li>
-          <li className={tabName.type.name.slice(0,5)==='Proje' && 'current'}onClick={()=>changeTab(<Projects/>)}>Projects</li>
-          <li className={tabName.type.name.slice(0,5)==='About' && 'current'}onClick={()=>changeTab(<AboutMe/>)}>About Me</li>
-          <li className={tabName.type.name.slice(0,5)==='Conta' && 'current'}onClick={()=>changeTab(<Contact/>)}>Contact</li>
+          <li className={tabName.type.name.slice(0,5)==='Welco'? 'current': undefined} onClick={()=>changeTab(<Welcome/>)}>Welcome</li>
+          <li className={tabName.type.name.slice(0,5)==='Proje'? 'current': undefined}onClick={()=>changeTab(<Projects/>)}>Projects</li>
+          <li className={tabName.type.name.slice(0,5)==='About'? 'current': undefined}onClick={()=>changeTab(<AboutMe/>)}>About Me</li>
+          <li className={tabName.type.name.slice(0,5)==='Conta'? 'current': undefined}onClick={()=>changeTab(<Contact/>)}>Contact</li>
         </ul>
       </nav>
       <main>
