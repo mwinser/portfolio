@@ -246,7 +246,7 @@ nav ul {
     background: none;
     display: flex;
     flex-direction: row;
-    font-size: .rem;
+    font-size: .5rem;
     transform: translateX(0);
     opacity: 1;
 
