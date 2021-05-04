@@ -17,16 +17,16 @@ function AboutMe() {
           </p>
           <ul>
             <li>Front End 
-              <p>Javascript (ES6+), React, jQuery, HTML5, CSS3, Tailwind, SASS, JSON, AJAX, BootStrap & D3 </p>
+              <p>Javascript (ES6+), React, HTML5, CSS3, Tailwind, SASS, Wordpress, Elementor & D3 </p>
             </li>
             <li>Back End 
-              <p>REST, Node, Express, MongoDB, Mongoose, Firebase & Firestore</p>
+              <p>Node, Express, MongoDB, Mongoose, Firebase & Firestore</p>
             </li>
-            <li>Principles & Methodologies
-              <p>Mobile First Design & Responsive Design</p>
+            <li>Principles, Patterns & Methodologies
+              <p>DRY, W3C, Mobile First Design & Responsive Design</p>
             </li>
             <li>Testing & Others
-              <p>Chai, Git, NPM, VS Code, Windows Shell scripting, R, & SAS </p>
+              <p>Mocha, Git, NPM, VS Code, Windows Shell scripting, Figma, R & SAS </p>
             </li>
           </ul>
         </div>
