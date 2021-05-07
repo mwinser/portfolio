@@ -4,11 +4,11 @@ import {Switch, Route} from 'react-router-dom'
 import * as ROUTES from './constants/routes'
 import Navbar from './components/navbar'
 
-const Welcome = lazy(()=> import("./pages/welcome"))
-const Projects = lazy(()=> import("./pages/projects"))
-const AboutMe = lazy(()=> import("./pages/aboutme"))
-const Contact = lazy(()=> import("./pages/contact"))
-const Error = lazy(()=> import("./pages/error"))
+const Welcome = lazy(()=> import("./layouts/welcome"))
+const Projects = lazy(()=> import("./layouts/projects"))
+const AboutMe = lazy(()=> import("./layouts/aboutme"))
+const Contact = lazy(()=> import("./layouts/contact"))
+const Error = lazy(()=> import("./layouts/error"))
 
 function App () {
 
