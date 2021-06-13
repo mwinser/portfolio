@@ -2,6 +2,7 @@ import petals from "./petals-site.png"
 import castaways from "./castaways-site.png"
 import bumblr from "./bumblr.png"
 import bdt from "./bdt-site.webp"
+import slider from "./Price-Slider.gif"
 const projectData = [
     {
         name:"Tumblr Clone",
@@ -30,6 +31,13 @@ const projectData = [
         image:bdt,
         link:"https://bdt-improv.netlify.app/" ,
         git: "https://github.com/mwinser/Improv-Suggestion-App"
+    },
+    {
+        name:"Pricing Slider",
+        description:"Frontend Mentor project converting design to code, with a focus on cross-browser compatibility",
+        image: slider,
+        link:"https://slider-prices.netlify.app/",
+        git: "https://github.com/mwinser/interactive-pricing-component" 
     },
     {
         name:"Landing Page",
