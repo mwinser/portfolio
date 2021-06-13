@@ -5,6 +5,7 @@ function AboutMe() {
 
     return(
       <section className="primary-section">
+        <div id="img-frame" title="Mike at the Gorge"></div>
         <div className="text-tile">
           <h1>About Me</h1>
           <p>Hi! I'm a former Sleep Scientist (yes, that is a thing) in beautiful Spokane, WA and I recently started a new career in web development
