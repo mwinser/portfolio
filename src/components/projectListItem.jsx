@@ -6,9 +6,11 @@ export default function ProjectListItem(props){
     const {project} = props
     
     return(
-        <a href={project.link}>
+        
             <div className="project-tile" >
-                <img className="project-img" src={project.image} alt={props.name + " screenshot"} />
+                <a href={project.link}>
+                    <div className="project-img" style={{backgroundImage: "url(" + project.image + ")"}} alt={project.name + " screenshot"} />
+                </a>
                 <div className="project-desc">
                     <div className="project-title">
                         <a href={project.link}><FontAwesomeIcon icon={faLink} /></a>
@@ -23,6 +25,6 @@ export default function ProjectListItem(props){
                     <p>{project.description}</p>
                 </div>
             </div>
-        </a>
+        
     )
 }

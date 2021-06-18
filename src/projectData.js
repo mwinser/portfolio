@@ -40,13 +40,6 @@ const projectData = [
         git: "https://github.com/mwinser/interactive-pricing-component" 
     },
     {
-        name:"Landing Page",
-        description:"Expanded freeCodeCamp landing page project to work on responsive UI design",
-        image:"https://assets.codepen.io/5166947/internal/screenshots/pens/XWKbapp.default.png?fit=cover&format=auto&ha=true&height=540&quality=75&v=2&version=1609729930&width=960",
-        link:"https://codepen.io/winserm/full/XWKbapp",
-        codepen: "https://codepen.io/winserm/pen/XWKbapp" 
-    },
-    {
         name:"Data Visualization",
         description:"freeCodeCamp data visualization project using D3",
         image:"https://assets.codepen.io/5166947/internal/screenshots/pens/XWKOxpv.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1605745655&width=960",
