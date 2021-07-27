@@ -1,4 +1,5 @@
 import React from "react"
+import SkillsCard from "../components/skillsCard"
 
 
 function AboutMe() {
@@ -16,21 +17,13 @@ function AboutMe() {
           </p>
           <p>Here are some of the technologies I use:
           </p>
-          <ul>
-            <li>Front End 
-              <p>Javascript (ES6+), React, HTML5, CSS3, Tailwind, SASS, Wordpress, Elementor & D3 </p>
-            </li>
-            <li>Back End 
-              <p>Node, Express, MongoDB, Mongoose, Firebase & Firestore</p>
-            </li>
-            <li>Principles, Patterns & Methodologies
-              <p>DRY, W3C, Mobile First Design & Responsive Design</p>
-            </li>
-            <li>Testing & Others
-              <p>Mocha, Git, NPM, VS Code, Windows Shell scripting, Figma, R & SAS </p>
-            </li>
-          </ul>
-        </div>
+          <div className="flex-cards">
+            <SkillsCard title="Front End" skills="Javascript (ES6+), React, HTML5, CSS3, Tailwind, SASS, Wordpress, Elementor & D3"/>
+            <SkillsCard title="Back End" skills="Node, Express, MongoDB, Mongoose, Firebase & Firestore"/>
+            <SkillsCard title="Principles, Patterns & Methodologies" skills="DRY, W3C, Mobile First Design & Responsive Design"/>
+            <SkillsCard title="Testing & Others" skills="Mocha, Git, NPM, VS Code, Windows Shell scripting, Figma, R & SAS"/>
+          </div>
+          </div>
       </section>
     )
   }
