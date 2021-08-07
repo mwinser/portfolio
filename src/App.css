@@ -239,6 +239,7 @@ li p {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 2em;
 }
 .skills-card {
   color: white;
@@ -246,9 +247,9 @@ li p {
   height: 275px;
   margin: 1rem .5rem;
   background: rgba(15,14,38,1);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 3rem;
   border-radius: 1rem;
-  line-height: 2.5rem;
+  line-height: 2rem;
 }
 
 @media (min-width:600px){
