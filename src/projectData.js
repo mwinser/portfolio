@@ -3,6 +3,7 @@ import castaways from "./castaways-site.png"
 import bumblr from "./bumblr.png"
 import bdt from "./bdt-site.webp"
 import slider from "./Price-Slider.gif"
+import blogr from "./blogr.png"
 const projectData = [
     {
         name:"Tumblr Clone",
@@ -38,6 +39,13 @@ const projectData = [
         image: slider,
         link:"https://slider-prices.netlify.app/",
         git: "https://github.com/mwinser/interactive-pricing-component" 
+    },
+    {
+        name:"Landing Page",
+        description:"Frontend Mentor project converting design to code, with a focus on responsiveness",
+        image: blogr,
+        link:"https://blogr-landr.netlify.app/",
+        git: "https://github.com/mwinser/blogr-landingpage-challenge" 
     },
     {
         name:"Data Visualization",
