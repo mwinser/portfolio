@@ -144,7 +144,7 @@ nav ul li:hover {
 
 #links {
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
 }
 
 #projects{
@@ -212,7 +212,7 @@ nav ul li:hover {
 .text-tile{
   font-size: 1rem;
   line-height: 1.6rem;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   max-width: 750px;
   margin: 0 auto;
 
