@@ -7,7 +7,7 @@
 
 html, body{
   background-color: white;
-  background: url("/src/Dragon-Scales.svg");
+  /*background: url("/src/Dragon-Scales.svg");
   /* background by SVGBackgrounds.com */
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
@@ -27,7 +27,7 @@ p{
   font-family: 'Nunito', sans-serif;
 }
 nav{
-  background-color: rgba(15,14,38,0);
+  background-color: rgba(15,14,38,1);
   width: 100vw;
   display: flex;
   justify-content: space-between;
