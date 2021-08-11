@@ -30,7 +30,7 @@ export default function Navbar(){
         <ul className= {isMenuOpen ? 'nav-open': null}>
             <Link to={ROUTES.WELCOME}><li className={location.pathname===ROUTES.WELCOME? 'current' : null}>Welcome</li></Link>
             <Link to={ROUTES.PROJECTS}><li className={location.pathname===ROUTES.PROJECTS? 'current' : null}>Projects</li></Link>
-            <Link to={ROUTES.ABOUT}><li className={location.pathname===ROUTES.ABOUT? 'current' : null}>About Me</li></Link>
+            <Link to={ROUTES.ABOUT}><li className={location.pathname===ROUTES.ABOUT? 'current' : null}>About</li></Link>
             <Link to={ROUTES.CONTACT}><li className={location.pathname===ROUTES.CONTACT? 'current' : null}>Contact</li></Link>
         </ul>
     </nav>

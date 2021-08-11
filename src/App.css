@@ -7,6 +7,8 @@
 
 html, body{
   background-color: white;
+  background: url("/src/Dragon-Scales.svg");
+  /* background by SVGBackgrounds.com */
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
   height: 100vh;
@@ -25,18 +27,17 @@ p{
   font-family: 'Nunito', sans-serif;
 }
 nav{
-  background-color: rgba(15,14,38,1);
+  background-color: rgba(15,14,38,0);
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  color: #CCC;
+  color: white;
   align-items: center;
 }
 #titlebar{
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.5rem;
   padding: .5rem;
-  padding-left: 1rem;
+  padding-left: 2rem;
 
 }
 
@@ -53,7 +54,7 @@ nav i {
 }
 
 .ex {
-  stroke:#CCC;
+  stroke:white;
   stroke-width:3;
   stroke-linecap: round;
   transition: transform ease-in-out .5s;
@@ -85,7 +86,7 @@ nav ul {
     width: 50%;
     background: rgba(15,14,38,1);
     margin: 0;
-    padding-left: 0;
+    padding-left: 1rem;
     opacity: 0;
     flex-direction: column;
     z-index: 1;
@@ -121,12 +122,13 @@ nav ul li:hover {
 }
 
 #img-frame{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background-size: cover;
     background-position: 90% 0;
     background-image:url('Profile.webp');
     border-radius: 50%;
+    border: 2px solid white;
     margin: auto;
 
 }
@@ -160,7 +162,7 @@ nav ul li:hover {
 .project-tile{
   padding: 0;
   height: 285px;
-  width: 250px;
+  width: 285px;
   margin: 2rem;
   border-radius: 32px;
   box-shadow: 10px 10px 10px 0px rgba(0,0,0,.1);
@@ -212,9 +214,11 @@ nav ul li:hover {
 .text-tile{
   font-size: 1rem;
   line-height: 1.6rem;
-  padding: 1rem 1rem;
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
   max-width: 750px;
-  margin: 0 auto;
+  margin: 2em auto;
+  background: white;
 
 }
 .text-tile h1{
@@ -242,13 +246,7 @@ li p {
   margin-top: 2em;
 }
 .skills-card {
-  color: white;
-  width: 275px;
-  height: 275px;
-  margin: 1rem .5rem;
-  background: rgba(15,14,38,1);
-  padding: 0.5rem 3rem;
-  border-radius: 1rem;
+
   line-height: 2rem;
 }
 
@@ -275,6 +273,7 @@ nav ul.nav-open{
 nav ul li {
     width: auto;
     font-size: 1.2rem;
+    padding: .5rem
 }
 nav i {
     display: none;
@@ -300,6 +299,7 @@ nav i {
   }
   nav ul li {
     font-size: 1.5rem;
+    padding: 2rem;
   }
   .project-desc p {
     font-size: 1rem;
