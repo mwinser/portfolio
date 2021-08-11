@@ -7,14 +7,14 @@ import blogr from "./blogr.png"
 const projectData = [
     {
         name:"Tumblr Clone",
-        description:"A clone of Tumblr using React, Tailwind, Firebase Auth and Firestore.",
+        description:"A functional clone of Tumblr using React, Tailwind, Firebase Auth and Firestore.",
         image:bumblr,
         link:"https://bumblr.netlify.app/",
         git: "https://github.com/mwinser/tumblr-clone"
     },
     {
         name:"Ecommerce Site",
-        description:"Project using React Router to create a multipage responsive site with a cart",
+        description:"Project using React Router to create a multipage responsive site with a cart and local storage",
         image:petals,
         link:"https://petal-site.netlify.com" ,
         git: "https://github.com/mwinser/ecommerce-site"
@@ -42,7 +42,7 @@ const projectData = [
     },
     {
         name:"Landing Page",
-        description:"Frontend Mentor project converting design to code, with a focus on responsiveness",
+        description:"Frontend Mentor project converting design to code, with a focus on responsiveness using JS and SASS",
         image: blogr,
         link:"https://blogr-landr.netlify.app/",
         git: "https://github.com/mwinser/blogr-landingpage-challenge" 
