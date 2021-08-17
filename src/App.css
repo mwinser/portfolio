@@ -17,6 +17,7 @@ body{
   position: relative;
   -ms-overflow-style: none;  /* IE no vert scrollbar*/
   scrollbar-width: none;  /* Firefox no vert scrollbar */
+  background: linear-gradient(#0f0e26, #004d9c);
 }
 /*remove vertical scrollbar*/
 body::-webkit-scrollbar {
@@ -27,12 +28,11 @@ p{
   font-family: 'Nunito', sans-serif;
 }
 nav{
-  background-color: rgba(15,14,38,1);
   width: 100vw;
   display: flex;
   justify-content: space-between;
   color: white;
-  align-items: center;
+  align-items: flex-end;
 }
 #titlebar{
   font-size: 1.5rem;
@@ -41,16 +41,39 @@ nav{
 
 }
 
-a{
-  color: white;
+a {
+  position: relative;
+  color: #FFF;
   text-decoration: none;
+}
+
+a:hover {
+  color: #FFF;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+a:hover::before {
+  transform: scaleX(1);
 }
 
 nav i {
     display: flex;
     place-content: center;
     font-size: 1.5rem;
-    padding-right: .5rem;
+    padding: .75rem;
+    z-index: 2;
 }
 
 .ex {
@@ -80,13 +103,13 @@ nav ul {
     list-style: none;
     position: absolute;
     display: flex;
-    top: 2.5rem;
+    top: 0;
     right: 0;
     transform: translateX(300px);
     width: 50%;
     background: rgba(15,14,38,1);
     margin: 0;
-    padding-left: 1rem;
+    padding-left: 0;
     opacity: 0;
     flex-direction: column;
     z-index: 1;
@@ -109,16 +132,18 @@ nav ul i:hover {
 nav ul li {
     font-size: 1.5rem;
     width: 100%;
-    padding: 1em;
+    margin: 1em;
     display: grid;
     align-items: center;
 }
 nav ul li:hover {
-    background: rgba(37, 35, 94,1);
     cursor: pointer;
 }
 .current {
-  text-decoration: underline;
+  color: #bbb;
+}
+.current:hover {
+  color: white;
 }
 
 #img-frame{
@@ -278,7 +303,8 @@ nav ul.nav-open{
 nav ul li {
     width: auto;
     font-size: 1.2rem;
-    padding: .5rem
+    margin: .5rem;
+    margin-bottom: 0;
 }
 nav i {
     display: none;
@@ -304,7 +330,8 @@ nav i {
   }
   nav ul li {
     font-size: 1.5rem;
-    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 0;
   }
   .project-desc p {
     font-size: 1rem;

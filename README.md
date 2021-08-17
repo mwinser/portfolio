@@ -1,4 +1,4 @@
-# My personal portfolio page
+# Hi! Welcome to my portfolio page!
 
-Made with React.js
+Made with React, react-router
 
