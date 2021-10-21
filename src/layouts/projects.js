@@ -6,12 +6,21 @@ function Projects(){
         <>
         <section className="primary-section">
             <div className="text-tile">
-                <h1>Recent Projects</h1>
-                <p>Have a look at some recent projects I've been working on:</p>
+                <h1>Projects</h1>
+                <p>Check out a sampling of my completed projects:</p>
             </div>
         </section>
         <section id="projects">
             <ProjectListContainer />
+        </section>
+        <section className="primary-section">
+            <div className="text-tile">
+                <h1>Works in Progress</h1>
+                <p>Functional projects I'm currently working on:</p>
+            </div>
+        </section>
+        <section id="projects">
+            <ProjectListContainer showWIP={true}/>
         </section>
         </>
     )

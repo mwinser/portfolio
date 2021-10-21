@@ -5,6 +5,9 @@ import bdt from "./bdt-site.webp"
 import slider from "./Price-Slider.gif"
 import blogr from "./blogr.png"
 import accordion from "./accordion.png"
+import playlist from "./playlist.png"
+import scroll from "./scroll.png"
+
 const projectData = [
     {
         name:"Tumblr Clone",
@@ -39,7 +42,24 @@ const projectData = [
         description:"Design project featuring accordion-style image menu with expanding panels",
         image: accordion,
         link:"https://accordion-articles.netlify.app/",
-        git: "https://github.com/mwinser/AccordionArticles" 
+        git: "https://github.com/mwinser/AccordionArticles",
+        wip: true, 
+    },
+    {
+        name:"Improv Playlist Manager",
+        description:"Gatsby project for creating game playlists for improv shows using Google Sheets as a headless CMS",
+        image: playlist,
+        link:"https://improv-playlist-manager.netlify.app/",
+        git: "https://github.com/mwinser/improv-playlist-manager",
+        wip: true, 
+    },
+    {
+        name:"Scrolling Effects",
+        description:"Project to display a variety of scroll effects and animations",
+        image: scroll,
+        link:"https://scroll-animatrix.netlify.app/",
+        git: "https://github.com/mwinser/ScrollAnimations",
+        wip: true, 
     },
     {
         name:"Pricing Slider",
