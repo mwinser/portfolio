@@ -16,7 +16,13 @@ function App () {
     <div>
       <Navbar/>
       <main>
-        <Suspense fallback = {<p style={{"color":"white"}}>Loading...</p>}>
+        <Suspense fallback = {
+          <section className="primary-section">
+            <div className="text-tile">
+              <h1>Loading...</h1>
+            </div>
+          </section>
+        }>
           <Switch>
             <Route exact path={ROUTES.WELCOME} component={Welcome}/>
             <Route exact path={ROUTES.PROJECTS} component={Projects}/>

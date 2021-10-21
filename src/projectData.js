@@ -4,6 +4,7 @@ import bumblr from "./bumblr.png"
 import bdt from "./bdt-site.webp"
 import slider from "./Price-Slider.gif"
 import blogr from "./blogr.png"
+import accordion from "./accordion.png"
 const projectData = [
     {
         name:"Tumblr Clone",
@@ -32,6 +33,13 @@ const projectData = [
         image:bdt,
         link:"https://bdt-improv.netlify.app/" ,
         git: "https://github.com/mwinser/Improv-Suggestion-App"
+    },
+    {
+        name:"Accordion Design",
+        description:"Design project featuring accordion-style image menu with expanding panels",
+        image: accordion,
+        link:"https://accordion-articles.netlify.app/",
+        git: "https://github.com/mwinser/AccordionArticles" 
     },
     {
         name:"Pricing Slider",
