@@ -18,7 +18,7 @@ const projectData = [
     },
     {
         name:"Ecommerce Site",
-        description:"Project using React Router to create a multipage responsive site with a cart and local storage",
+        description:"Multipage responsive site with a cart and local storage using React Router",
         image:petals,
         link:"https://petal-site.netlify.com" ,
         git: "https://github.com/mwinser/ecommerce-site"
@@ -47,15 +47,15 @@ const projectData = [
     },
     {
         name:"Improv Playlist Manager",
-        description:"Gatsby project for creating game playlists for improv shows using Google Sheets as a headless CMS",
+        description:"Gatsby project which creates game playlists for improv shows using Google Sheets as a headless CMS",
         image: playlist,
         link:"https://improv-playlist-manager.netlify.app/",
         git: "https://github.com/mwinser/improv-playlist-manager",
         wip: true, 
     },
     {
-        name:"Scrolling Effects",
-        description:"Project to display a variety of scroll effects and animations",
+        name:"UI Effects",
+        description:"Project displaying a variety of scroll effects and UI animations",
         image: scroll,
         link:"https://scroll-animatrix.netlify.app/",
         git: "https://github.com/mwinser/ScrollAnimations",
