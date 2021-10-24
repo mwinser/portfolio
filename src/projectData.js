@@ -17,8 +17,8 @@ const projectData = [
         git: "https://github.com/mwinser/tumblr-clone"
     },
     {
-        name:"Ecommerce Site",
-        description:"Multipage responsive site with a cart and local storage using React Router",
+        name:"Ecommerce Design",
+        description:"Multipage responsive site with a local storage of user data and cart items",
         image:petals,
         link:"https://petal-site.netlify.com" ,
         git: "https://github.com/mwinser/ecommerce-site"
