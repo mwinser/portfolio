@@ -51,7 +51,7 @@ a:hover {
   color: #FFF;
 }
 
-a::before {
+nav a::before {
   content: "";
   position: absolute;
   display: block;
@@ -60,6 +60,7 @@ a::before {
   bottom: 0;
   left: 0;
   background-color: #FFF;
+  transform-origin: left;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -74,6 +75,7 @@ nav i {
     font-size: 1.5rem;
     padding: .75rem;
     z-index: 2;
+    cursor: pointer;
 }
 
 .ex {
@@ -125,19 +127,15 @@ nav ul.nav-open{
 nav ul i {
     font-size: 2rem;
     padding: 1rem;
-}
-nav ul i:hover {
     cursor: pointer;
-    }
+}
+
 nav ul li {
     font-size: 1.5rem;
     width: 100%;
     margin: 1em;
     display: grid;
     align-items: center;
-}
-nav ul li:hover {
-    cursor: pointer;
 }
 .current {
   color: #bbb;
@@ -199,9 +197,8 @@ nav ul li:hover {
   
 }
 .project-tile:hover{
-  transform: scale(1.1);
-  transition: .2s ease-out;
-  box-shadow: 5px 5px 10px 5px rgba(0,0,0,.1);
+  transform: translateY(-2%);
+  transition: .5s cubic-bezier(0.4, -0.06, 0.32, 1.6);
 }
 
 .project-img {
@@ -303,11 +300,14 @@ nav ul.nav-open{
 nav ul li {
     width: auto;
     font-size: 1.2rem;
-    margin: .5rem;
-    margin-bottom: 0;
+    margin: 0 1rem 0 0;
 }
 nav i {
     display: none;
+}
+
+a:hover::before {
+  transform: scaleX(.9);
 }
 
 }
@@ -330,9 +330,13 @@ nav i {
   }
   nav ul li {
     font-size: 1.5rem;
-    margin: 2rem;
-    margin-bottom: 0;
+    margin: 0 4rem 0 0;
   }
+
+  a:hover::before {
+    transform: scaleX(.65);
+  }
+
   .project-desc p {
     font-size: 1rem;
   }
