@@ -3,6 +3,7 @@ import React, {lazy, Suspense} from "react"
 import {Switch, Route} from 'react-router-dom'
 import * as ROUTES from './constants/routes'
 import Navbar from './components/navbar'
+import Spinner from './components/spinner'
 
 const Welcome = lazy(()=> import("./layouts/welcome"))
 const Projects = lazy(()=> import("./layouts/projects"))
@@ -18,8 +19,8 @@ function App () {
       <main>
         <Suspense fallback = {
           <section className="primary-section">
-            <div className="text-tile">
-              <h1>Loading...</h1>
+            <div className="text-tile" style={{"background": "unset"}}>
+              <Spinner/>
             </div>
           </section>
         }>

@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+:root {
+  --icon-color: white;
+}
 
 * {box-sizing: border-box}
 
@@ -271,6 +274,58 @@ li p {
   line-height: 2rem;
 }
 
+#spinner {
+  fill: var(--icon-color);
+}
+#em1,
+#em2,
+#em3 {
+  transform-origin: center;
+}
+#em1 {
+  animation: bumpUp 1s both infinite;
+}
+@keyframes bumpUp {
+  0% {
+    opacity: 0;
+    transform: translate(-17%, 38%);
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    transform: translate(-17%, 0%);
+  }
+  100% {
+    
+    transform: translate(0%, 0%)
+  }
+}
+#em2 {
+  animation: flipOver 1s both infinite;
+}
+@keyframes flipOver {
+  0%, 10% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+#em3 {
+  animation: duckOut 1s both infinite;
+}
+@keyframes duckOut {
+  0%, 10% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg) translate(-10%, -30%);
+    opacity: 0;
+  }
+  
+}
 @media (min-width:600px){
 
 p {
