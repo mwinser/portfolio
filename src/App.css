@@ -3,7 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
-  --icon-color: white;
+  --foreground: white;
+  --middle: #bbb;
+  --background: linear-gradient(#0f0e26, #004d9c);
+  --project-tile: rgba(15,14,38,1);
 }
 
 * {box-sizing: border-box}
@@ -16,14 +19,17 @@ html, body{
   overflow-x: hidden;
   height: 100vh;
 }
-body{
+.app-container{
   position: relative;
+  height: 100%;
+  min-height: 100vh;
   -ms-overflow-style: none;  /* IE no vert scrollbar*/
   scrollbar-width: none;  /* Firefox no vert scrollbar */
-  background: linear-gradient(#0f0e26, #004d9c);
+  background: var(--background);
+  background-attachment:fixed;
 }
 /*remove vertical scrollbar*/
-body::-webkit-scrollbar {
+.app-container::-webkit-scrollbar {
   display: none;
 }
 p{
@@ -45,12 +51,12 @@ nav{
 
 a {
   position: relative;
-  color: #FFF;
+  color: var(--foreground);
   text-decoration: none;
 }
 
 a:hover {
-  color: #FFF;
+  color: var(--foreground);
 }
 
 nav a::before {
@@ -61,7 +67,7 @@ nav a::before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #FFF;
+  background-color: var(--foreground);
   transform-origin: left;
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -140,11 +146,12 @@ nav ul li {
     align-items: center;
 }
 .current {
-  color: #bbb;
+  color: var(--middle);
 }
 .current:hover {
-  color: white;
+  color: var(--foreground);
 }
+
 
 #img-frame{
     width: 200px;
@@ -153,7 +160,7 @@ nav ul li {
     background-position: 90% 0;
     background-image:url('Profile.webp');
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid var(--foreground);
     margin: auto;
 
 }
@@ -190,9 +197,9 @@ nav ul li {
   width: 285px;
   margin: 2rem;
   border-radius: 32px;
-  box-shadow: 10px 10px 10px 0px rgba(0,0,0,.1);
+  box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.1);
   
-  color: white;
+  color: var(--foreground);
   transition: .2s ease-out;
   position: relative;
   overflow: hidden;
@@ -213,7 +220,7 @@ nav ul li {
   height: 40%;
   padding: 0 1rem;
   font-size: .9rem;
-  background: rgba(15,14,38,1);
+  background: var(--project-tile);
 }
 .project-title {
   font-size: 1.2rem;
@@ -275,7 +282,7 @@ li p {
 }
 
 #spinner {
-  fill: var(--icon-color);
+  fill: var(--foreground);
 }
 #em1,
 #em2,

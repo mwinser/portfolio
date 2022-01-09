@@ -1,6 +1,7 @@
 import './App.css';
 import React, {lazy, Suspense} from "react"
 import {Switch, Route} from 'react-router-dom'
+import ThemeProvider from './context/themeContext'
 import * as ROUTES from './constants/routes'
 import Navbar from './components/navbar'
 import Spinner from './components/spinner'
@@ -14,7 +15,8 @@ const Error = lazy(()=> import("./layouts/error"))
 function App () {
 
   return(
-    <div>
+    <ThemeProvider>
+      <div className="app-container">
       <Navbar/>
       <main>
         <Suspense fallback = {
@@ -33,7 +35,8 @@ function App () {
           </Switch>
         </Suspense>
       </main>
-    </div>
+      </div>
+    </ThemeProvider>
   )
 }
 
