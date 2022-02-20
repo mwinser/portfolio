@@ -50,7 +50,7 @@ export default function Navbar(){
             <Link to={ROUTES.PROJECTS}><li className={location.pathname===ROUTES.PROJECTS? 'current' : null}>Projects</li></Link>
             <Link to={ROUTES.ABOUT}><li className={location.pathname===ROUTES.ABOUT? 'current' : null}>About</li></Link>
             <Link to={ROUTES.CONTACT}><li className={location.pathname===ROUTES.CONTACT? 'current' : null}>Contact</li></Link>
-            <li onClick={()=>toggleTheme()}><FontAwesomeIcon icon={isSun ? faSun : faMoon}/></li>
+            <li className="theme-switch" onClick={()=>{toggleTheme(); return toggleMenu()}}><FontAwesomeIcon icon={isSun ? faSun : faMoon}/></li>
         </ul>
     </nav>
   )

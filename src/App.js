@@ -17,24 +17,27 @@ function App () {
   return(
     <ThemeProvider>
       <div className="app-container">
-      <Navbar/>
-      <main>
-        <Suspense fallback = {
-          <section className="primary-section">
-            <div className="text-tile" style={{"background": "unset"}}>
-              <Spinner/>
-            </div>
-          </section>
-        }>
-          <Switch>
-            <Route exact path={ROUTES.WELCOME} component={Welcome}/>
-            <Route exact path={ROUTES.PROJECTS} component={Projects}/>
-            <Route exact path={ROUTES.ABOUT} component={AboutMe}/>
-            <Route exact path={ROUTES.CONTACT} component={Contact}/>
-            <Route path="/" component={Error}/>
-          </Switch>
-        </Suspense>
-      </main>
+        <div className="shower one"></div>
+        <div className="shower two"></div>
+        <div className="shower three"></div>
+        <Navbar/>
+        <main>
+          <Suspense fallback = {
+            <section className="primary-section">
+              <div className="text-tile" style={{"background": "unset"}}>
+                <Spinner/>
+              </div>
+            </section>
+          }>
+            <Switch>
+              <Route exact path={ROUTES.WELCOME} component={Welcome}/>
+              <Route exact path={ROUTES.PROJECTS} component={Projects}/>
+              <Route exact path={ROUTES.ABOUT} component={AboutMe}/>
+              <Route exact path={ROUTES.CONTACT} component={Contact}/>
+              <Route path="/" component={Error}/>
+            </Switch>
+          </Suspense>
+        </main>
       </div>
     </ThemeProvider>
   )

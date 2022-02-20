@@ -17,21 +17,88 @@ html, body{
   /* background by SVGBackgrounds.com */
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE no vert scrollbar*/
+  scrollbar-width: none;  /* Firefox no vert scrollbar */
   height: 100vh;
 }
 .app-container{
   position: relative;
   height: 100%;
   min-height: 100vh;
-  -ms-overflow-style: none;  /* IE no vert scrollbar*/
-  scrollbar-width: none;  /* Firefox no vert scrollbar */
+  overflow: hidden;
+
   background: var(--background);
   background-attachment:fixed;
 }
 /*remove vertical scrollbar*/
-.app-container::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
+.shower {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  border:3px solid var(--foreground);
+  opacity: .1;
+  animation:  shower 30s linear infinite; 
+  z-index: 0;
+}
+.shower.one {
+  top: -10vh;
+  right: 10vw;
+}
+.shower.two {
+  width: 50px;
+  height: 50px;
+  top: -30vh;
+  right: 50vw;
+  animation-delay: 1.5s;
+}
+.shower.three {
+  width: 30px;
+  height: 30px;
+  top: -40vh;
+  right: -40vw;
+  animation-delay: 3s;
+}
+@keyframes shower {
+  0% {
+    transform: translate(0,0) rotate(18deg) ;
+  }
+  100% {
+    transform: translate(-120vw, 120vh) rotate(215deg) ;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: rotate(18deg);
+    top: 50vh;
+    left: calc(100vw - 100px);
+  }
+  25% {
+    transform: rotate(108deg);
+    top: calc(100vh - 100px);
+    left: 50vw;
+  }
+  50% {
+    transform: rotate(18deg);
+    top: 50vh;
+    left: 0;
+  }
+  75% {
+    transform: rotate(288deg);
+    top: 0;
+    left: 50vw;
+  }
+  100% {
+    transform: rotate(18deg);
+    top: 50vh;
+    left: calc(100vw - 100px);
+  }
+}
+
 p{
   font-size: 1rem;
   font-family: 'Nunito', sans-serif;
@@ -87,7 +154,7 @@ nav i {
 }
 
 .ex {
-  stroke:white;
+  stroke:var(--foreground);
   stroke-width:3;
   stroke-linecap: round;
   transition: transform ease-in-out .5s;
@@ -122,7 +189,7 @@ nav ul {
     padding-left: 0;
     opacity: 0;
     flex-direction: column;
-    z-index: 1;
+    z-index: 10;
     transition: all .5s;
 }
 nav ul.nav-open{
@@ -145,6 +212,9 @@ nav ul li {
     display: grid;
     align-items: center;
 }
+.theme-switch {
+  cursor: pointer;
+}
 .current {
   color: var(--middle);
 }
@@ -158,10 +228,11 @@ nav ul li {
     height: 200px;
     background-size: cover;
     background-position: 90% 0;
-    background-image:url('Profile.webp');
+    background-image:url('assets/Profile.webp');
     border-radius: 50%;
     border: 2px solid var(--foreground);
     margin: auto;
+
 
 }
 
@@ -174,6 +245,8 @@ nav ul li {
   display: flex;
   flex-direction: column;
   place-content: center;
+  position: relative;
+  z-index: 1;
 }
 
 #links {
