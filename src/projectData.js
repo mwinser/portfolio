@@ -1,12 +1,12 @@
-import petals from "./assets/petals-site.png"
-import castaways from "./assets/castaways-site.png"
-import bumblr from "./assets/bumblr.png"
-import bdt from "./assets/bdt-site.webp"
-import slider from "./assets/Price-Slider.gif"
-import blogr from "./assets/blogr.png"
-import accordion from "./assets/accordion.png"
-import playlist from "./assets/playlist.png"
-import scroll from "./assets/scroll.png"
+import petals from "./assets/images/petals-site.png"
+import castaways from "./assets/images/castaways-site.png"
+import bumblr from "./assets/images/bumblr.png"
+import bdt from "./assets/images/bdt-site.webp"
+import slider from "./assets/images/Price-Slider.gif"
+import blogr from "./assets/images/blogr.png"
+import accordion from "./assets/images/accordion.png"
+import playlist from "./assets/images/playlist.png"
+import scroll from "./assets/images/scroll.png"
 
 const projectData = [
     {

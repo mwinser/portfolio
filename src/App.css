@@ -222,20 +222,6 @@ nav ul li {
   color: var(--foreground);
 }
 
-
-#img-frame{
-    width: 200px;
-    height: 200px;
-    background-size: cover;
-    background-position: 90% 0;
-    background-image:url('assets/Profile.webp');
-    border-radius: 50%;
-    border: 2px solid var(--foreground);
-    margin: auto;
-
-
-}
-
 .primary-section{
 
   color: #4c4c4c;

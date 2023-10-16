@@ -1,12 +1,13 @@
 import React from "react"
 import SkillsCard from "../components/skillsCard"
+import ProfilePic from "../components/profilePic"
 
 
 function AboutMe() {
 
     return(
       <section className="primary-section">
-        <div id="img-frame" title="Mike at the Gorge"></div>
+        <ProfilePic/>
         <div className="text-tile">
           <h1>About Me</h1>
           <p>Hi! I'm a self-taught web developer and former scientist living in the beautiful Pacific Northwest
