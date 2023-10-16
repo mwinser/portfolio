@@ -9,19 +9,18 @@ function AboutMe() {
         <div id="img-frame" title="Mike at the Gorge"></div>
         <div className="text-tile">
           <h1>About Me</h1>
-          <p>Hi! I'm a former Sleep Scientist (yes, that is a thing) in beautiful Spokane, WA and I recently started a new career in web development
+          <p>Hi! I'm a self-taught web developer and former scientist living in the beautiful Pacific Northwest
           </p>
-          <p>In October 2020, I began seriously learning web development with freeCodeCamp and created this website to share my work. 
+          <p> During Covid, I really started reconsidering my career as I got into game and web dev. I took a year off to focus on learning and took my first web development position in 2021.
           </p>
-          <p>I've always loved solving problems and making stuff, so I seriously love to code, especially when I'm making tools or games that other people enjoy.
-          </p>
-          <p>Here are some of the technologies I use:
+          <p>I've always loved solving problems and making stuff, so I seriously love to code.
           </p>
           <div className="flex-cards">
-            <SkillsCard title="Front End" skills="Javascript (ES6+), React, HTML5, CSS3, Tailwind, SASS, Wordpress, Elementor & D3"/>
-            <SkillsCard title="Back End" skills="Node, Express, MongoDB, Mongoose, Firebase & Firestore"/>
-            <SkillsCard title="Principles, Patterns & Methodologies" skills="DRY, W3C, Mobile First Design & Responsive Design"/>
-            <SkillsCard title="Testing & Others" skills="Mocha, Git, NPM, VS Code, Windows Shell scripting, Figma, R & SAS"/>
+            <SkillsCard title="Front Skillz" skills="HTML, CSS/SASS, JS, Vue/Nuxt, React, Tailwind, GSAP, Three.js, Babylon.js, Pixi.js"/>
+            <SkillsCard title="Back Skillz" skills="Node, Express, PHP, Firebase, Shopify, Wordpress, Docker"/>
+            <SkillsCard title="CMSs" skills="Prismic, Sanity, Craft, Wordpress(ACF)"/>
+            <SkillsCard title="Others" skills="Git, NPM, VS Code, GA/GTM, MailChimp, OpenAI API"/>
+            <SkillsCard title="Passions" skills="Pixel Perfect Design Implementation, Accessibility, Prompt Engineering"/>
           </div>
           </div>
       </section>
