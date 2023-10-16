@@ -6,8 +6,7 @@ function Projects(){
         <>
         <section className="primary-section">
             <div className="text-tile">
-                <h1>Projects</h1>
-                <p>Check out a sampling of my completed projects:</p>
+                <h1>Sample Projects</h1>
             </div>
         </section>
         <section id="projects">
@@ -15,12 +14,11 @@ function Projects(){
         </section>
         <section className="primary-section">
             <div className="text-tile">
-                <h1>Works in Progress</h1>
-                <p>Functional projects I'm currently working on:</p>
+                <h1>Personal Projects</h1>
             </div>
         </section>
         <section id="projects">
-            <ProjectListContainer showWIP={true}/>
+            <ProjectListContainer showPersonal={true}/>
         </section>
         </>
     )

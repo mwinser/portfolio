@@ -270,13 +270,13 @@ nav ul li {
 }
 
 .project-img {
-  height: 60%;
+  height: 55%;
   background-size: cover;
   background-position: center;
 }
 
 .project-desc {
-  height: 40%;
+  height: 45%;
   padding: 0 1rem;
   font-size: .9rem;
   background: var(--project-tile);
@@ -296,6 +296,9 @@ nav ul li {
 .project-desc p {
   margin-top: .5rem;
   font-size: .75rem;
+}
+.project-link-placeholder {
+  width: 19.2px;
 }
 
 #profile-pic {

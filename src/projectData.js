@@ -1,49 +1,58 @@
-import petals from "./assets/images/petals-site.png"
-import castaways from "./assets/images/castaways-site.png"
+import pepsi from "./assets/images/pepsi.gif"
+import annihilator from "./assets/images/annihilator.png"
 import bumblr from "./assets/images/bumblr.png"
 import bdt from "./assets/images/bdt-site.webp"
-import slider from "./assets/images/Price-Slider.gif"
-import blogr from "./assets/images/blogr.png"
-import accordion from "./assets/images/accordion.png"
+import fourteenfour from "./assets/images/14four.png"
+import affinius from "./assets/images/affinius.png"
 import playlist from "./assets/images/playlist.png"
-import scroll from "./assets/images/scroll.png"
+import micracleGro from "./assets/images/miraclegro.gif"
 
 const projectData = [
     {
-        name:"Tumblr Clone",
-        description:"A functional clone of Tumblr using React, Tailwind, Firebase Auth and Firestore.",
-        image:bumblr,
-        link:"https://bumblr.netlify.app/",
-        git: "https://github.com/mwinser/tumblr-clone"
+        name:"14Four Agency Site",
+        description:"Multipage agency site with CMS, and complex GSAP animations",
+        image: fourteenfour,
+        link:"https://www.14four.com/",
     },
     {
-        name:"Ecommerce Design",
-        description:"Multipage responsive site with a local storage of user data and cart items",
-        image:petals,
-        link:"https://petal-site.netlify.com" ,
-        git: "https://github.com/mwinser/ecommerce-site"
+        name:"Affinius Capital (USAA Real Estate)",
+        description:"Multipage investment company site with fully custom component-based Wordpress CMS.",
+        image: affinius,
+        link:"https://affiniuscapital.com/",
     },
     {
-        name:"Castaways Game",
-        description:"A Survivor-style game using useReducer to manage complicated state objects",
-        image:castaways,
-        link:"https://castaways.netlify.com" ,
-        git: "https://github.com/mwinser/castaways"
+        name:"Better with Pepsi",
+        description:"Side scrolling sweepstakes site with animations, hotspots and Spotify integration ",
+        image: pepsi,
+        link:"https://mot-062-better-with-pepsi.still.14four.com/" ,
+    },
+    {
+        name:"AT&T Annihlator Cup 2022‑2023",
+        description:"Multipage event site with CMS, realtime leaderboards, and time-based content",
+        image: annihilator,
+        link:"https://attannihilatorcup.com/" ,
+    },
+    {
+        name:"MiracleGro Sweepstakes",
+        description:"Single page sweepstakes site with custom slider, animations, and form validation",
+        image: micracleGro,
+        link:"https://sct-001-miracle-gro-escape-kit.still.14four.com/" ,
     },
     {
         name:"Improv App",
         description:"A suggestion generator for the Blue Door Theatre using vanilla javascript",
         image:bdt,
         link:"https://bdt-improv.netlify.app/" ,
-        git: "https://github.com/mwinser/Improv-Suggestion-App"
+        git: "https://github.com/mwinser/Improv-Suggestion-App",
+        personal: true,
     },
     {
-        name:"Accordion Design",
-        description:"Design project featuring accordion-style image menu with expanding panels",
-        image: accordion,
-        link:"https://accordion-articles.netlify.app/",
-        git: "https://github.com/mwinser/AccordionArticles",
-        wip: true, 
+        name:"Tumblr Clone",
+        description:"A functional clone of Tumblr using React, Tailwind, Firebase Auth and Firestore.",
+        image:bumblr,
+        link:"https://bumblr.netlify.app/",
+        git: "https://github.com/mwinser/tumblr-clone",
+        personal: true,
     },
     {
         name:"Improv Playlist Manager",
@@ -51,37 +60,8 @@ const projectData = [
         image: playlist,
         link:"https://improv-playlist-manager.netlify.app/",
         git: "https://github.com/mwinser/improv-playlist-manager",
-        wip: true, 
+        personal: true,
     },
-    {
-        name:"UI Effects",
-        description:"Project displaying a variety of scroll effects and UI animations",
-        image: scroll,
-        link:"https://scroll-animatrix.netlify.app/",
-        git: "https://github.com/mwinser/ScrollAnimations",
-        wip: true, 
-    },
-    {
-        name:"Pricing Slider",
-        description:"Frontend Mentor project converting design to code, with a focus on cross-browser compatibility",
-        image: slider,
-        link:"https://slider-prices.netlify.app/",
-        git: "https://github.com/mwinser/interactive-pricing-component" 
-    },
-    {
-        name:"Landing Page",
-        description:"Frontend Mentor project converting design to code, with a focus on responsiveness using JS and SASS",
-        image: blogr,
-        link:"https://blogr-landr.netlify.app/",
-        git: "https://github.com/mwinser/blogr-landingpage-challenge" 
-    },
-    {
-        name:"Data Visualization",
-        description:"freeCodeCamp data visualization project using D3",
-        image:"https://assets.codepen.io/5166947/internal/screenshots/pens/XWKOxpv.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1605745655&width=960",
-        link:"https://codepen.io/winserm/full/XWKOxpv",
-        codepen:"https://codepen.io/winserm/pen/XWKOxpv" 
-    }
 ]
 
 export default projectData
