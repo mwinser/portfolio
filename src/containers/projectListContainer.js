@@ -3,9 +3,9 @@ import projectData from '../projectData'
 
 export default function ProjectListContainer(props){
     
-    const showWIP = props.showWIP || false
+    const showPersonal = props.showPersonal || false
     return(
-        projectData.filter(project=>showWIP ? project.wip : !project.wip).map((project, index) =>(
+        projectData.filter(project=>showPersonal ? project.personal : !project.personal).map((project, index) =>(
             <ProjectListItem key={index} project={project}/>
         ))
     )
