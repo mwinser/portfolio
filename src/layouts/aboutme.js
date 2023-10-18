@@ -1,10 +1,11 @@
 import React from "react"
+import ReactGA from 'react-ga'
 import SkillsCard from "../components/skillsCard"
 import ProfilePic from "../components/profilePic"
 
 
 function AboutMe() {
-
+  ReactGA.pageview(window.location.pathname + window.location.search)
     return(
       <section className="primary-section">
         <ProfilePic/>

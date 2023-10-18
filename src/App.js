@@ -5,6 +5,7 @@ import ThemeProvider from './context/themeContext'
 import * as ROUTES from './constants/routes'
 import Navbar from './components/navbar'
 import Spinner from './components/spinner'
+import ReactGA from 'react-ga'
 
 const Welcome = lazy(()=> import("./layouts/welcome"))
 const Projects = lazy(()=> import("./layouts/projects"))
@@ -13,7 +14,7 @@ const Contact = lazy(()=> import("./layouts/contact"))
 const Error = lazy(()=> import("./layouts/error"))
 
 function App () {
-
+ReactGA.initialize('G-RL5NX1MQCQ', {debug: true});
   return(
     <ThemeProvider>
       <div className="app-container">
