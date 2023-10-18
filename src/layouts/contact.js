@@ -4,7 +4,7 @@ import Links from '../components/links'
 
 
 function Contact (){
-  ReactGA.pageview('/#/contact')
+  ReactGA.pageview('/contact')
     return( 
       <section className="primary-section">
         <div className="text-tile">

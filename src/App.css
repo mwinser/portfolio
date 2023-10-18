@@ -34,6 +34,27 @@ html, body{
 body::-webkit-scrollbar {
   display: none;
 }
+button {
+  font-family: inherit; 
+  font-size: 100%; 
+  line-height: 1.15;
+  margin: 0; 
+  padding: 0;
+  overflow: visible;
+  text-transform: none;
+  border: unset;
+  color: unset;
+  background-color: unset;
+  cursor: pointer; 
+}
+.screen-reader-text {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
 .shower {
   position: absolute;
   top: 0;
@@ -106,9 +127,10 @@ p{
 nav{
   width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   color: white;
   align-items: flex-end;
+  min-height: 4.5rem;
 }
 #titlebar{
   font-size: 1.5rem;
@@ -143,8 +165,19 @@ nav a::before {
 a:hover::before {
   transform: scaleX(1);
 }
-
-nav i {
+button:hover .theme-switch,
+button:focus-visible .theme-switch {
+  animation: rotate 2s linear forwards infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+nav .hamburger {
     display: flex;
     place-content: center;
     font-size: 1.5rem;
@@ -189,7 +222,7 @@ nav ul {
     padding-left: 0;
     opacity: 0;
     flex-direction: column;
-    z-index: 10;
+    z-index: 2;
     transition: all .5s;
 }
 nav ul.nav-open{
@@ -211,9 +244,6 @@ nav ul li {
     margin: 1em;
     display: grid;
     align-items: center;
-}
-.theme-switch {
-  cursor: pointer;
 }
 .current {
   color: var(--middle);
@@ -246,15 +276,18 @@ nav ul li {
   text-align: center;
   display: flex;
   justify-content: space-around;
-  align-items:center;
+  align-items: stretch;
   flex-wrap: wrap;
-  
+  gap: 4rem 2rem;
+  max-width: 100rem;
+  margin: 2rem auto 0;
 }
 .project-tile{
   padding: 0;
-  height: 285px;
-  width: 285px;
-  margin: 2rem;
+  width: 25%;
+  min-width: 18.75rem;
+  height: min-content;
+  min-height: 22.5%;
   border-radius: 32px;
   box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.1);
   
@@ -268,15 +301,21 @@ nav ul li {
   transform: translateY(-2%);
   transition: .5s cubic-bezier(0.4, -0.06, 0.32, 1.6);
 }
-
+.project-tile-contents {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .project-img {
   height: 55%;
+  min-height: 12rem;
   background-size: cover;
   background-position: center;
 }
 
 .project-desc {
   height: 45%;
+  min-height: 12rem;
   padding: 0 1rem;
   font-size: .9rem;
   background: var(--project-tile);
@@ -284,9 +323,9 @@ nav ul li {
 .project-title {
   font-size: 1.2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 0.25rem;
+  padding: 0.5rem;
 
 }
 .project-title h3 {
@@ -425,7 +464,7 @@ nav ul li {
     font-size: 1.2rem;
     margin: 0 1rem 0 0;
 }
-nav i {
+nav .hamburger {
     display: none;
 }
 
@@ -446,10 +485,6 @@ a:hover::before {
   }
   .text-tile{
     font-size: 1.4rem;
-  }
-  .project-tile {
-    height: 400px;
-    width: 350px;
   }
   nav ul li {
     font-size: 1.5rem;

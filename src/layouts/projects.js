@@ -2,12 +2,13 @@ import ReactGA from 'react-ga'
 import ProjectListContainer from "../containers/projectListContainer"
 
 function Projects(){
-    ReactGA.pageview('/#/projects')
+    ReactGA.pageview('/projects')
     return (
         <>
+        <h1 className="screen-reader-text">Projects</h1>
         <section className="primary-section">
             <div className="text-tile">
-                <h1>Sample Projects</h1>
+                <h2>Professional Work</h2>
             </div>
         </section>
         <section id="projects">
@@ -15,7 +16,7 @@ function Projects(){
         </section>
         <section className="primary-section">
             <div className="text-tile">
-                <h1>Personal Projects</h1>
+                <h2>Personal Projects</h2>
             </div>
         </section>
         <section id="projects">
