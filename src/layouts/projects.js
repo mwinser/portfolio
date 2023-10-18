@@ -1,7 +1,8 @@
+import ReactGA from 'react-ga'
 import ProjectListContainer from "../containers/projectListContainer"
 
 function Projects(){
-
+    ReactGA.pageview(window.location.pathname + window.location.search)
     return (
         <>
         <section className="primary-section">
