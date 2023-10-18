@@ -5,7 +5,7 @@ import ProfilePic from "../components/profilePic"
 
 
 function AboutMe() {
-  ReactGA.pageview(window.location.pathname + window.location.search)
+  ReactGA.pageview('/#/about')
     return(
       <section className="primary-section">
         <ProfilePic/>

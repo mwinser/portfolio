@@ -5,7 +5,7 @@ import ProfilePic from "../components/profilePic";
 
 
 function Welcome (){
-  ReactGA.pageview(window.location.pathname + window.location.search)
+  ReactGA.pageview('/#/')
     return( 
     <section className="primary-section">
       <div id="profile-container" >

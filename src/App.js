@@ -14,7 +14,7 @@ const Contact = lazy(()=> import("./layouts/contact"))
 const Error = lazy(()=> import("./layouts/error"))
 
 function App () {
-ReactGA.initialize('G-RL5NX1MQCQ', {debug: true});
+ReactGA.initialize('G-RL5NX1MQCQ', {debug: false});
   return(
     <ThemeProvider>
       <div className="app-container">
