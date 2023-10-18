@@ -13,7 +13,7 @@ function AboutMe() {
           <h1>About Me</h1>
           <p>Hi! I'm a self-taught web developer and former scientist living in the beautiful Pacific Northwest
           </p>
-          <p> During the pandemic, I started getting into game and web dev. I loved it so much, I decided quit my job and spent the next year learning everything I could, atking my first web development position in 2021.
+          <p> During the pandemic, I started getting into game and web dev. I loved it so much, I decided to quit my job and spent the next year learning everything I could, atking my first web development position in 2021.
           </p>
           <p>I love solving problems, learning new things and making stuff, so I seriously love to code.
           </p>
