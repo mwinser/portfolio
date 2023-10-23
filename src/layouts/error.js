@@ -1,8 +1,8 @@
 import React from "react"
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
 
 function Error() {
-  ReactGA.pageview('/error')
+  ReactGA.send({ hitType: "pageview", page: "/error"});
     return( 
       <section className="primary-section">
         <div className="text-tile">

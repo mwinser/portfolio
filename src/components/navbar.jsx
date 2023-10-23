@@ -4,6 +4,7 @@ import React, {useState, useEffect, useContext} from "react"
 import {Link, useLocation} from 'react-router-dom'
 import * as ROUTES from '../constants/routes'
 import { themes, ThemeContext } from "../context/themeContext"
+import ReactGA from 'react-ga4'
 
 export default function Navbar(){
   
@@ -17,7 +18,14 @@ export default function Navbar(){
     setIsMenuOpen(prevIsMenuOpen=>!prevIsMenuOpen)
   }
   function toggleTheme() {
-    setTheme(prevTheme=> prevTheme === themes.dark ? themes.light : themes.dark)
+    setTheme(prevTheme=> {
+      ReactGA.event({
+        category: "Custom Click",
+        action: "Toggle Theme",
+        label: prevTheme === themes.dark ? "Light" : "Dark", // optional
+      })
+      return prevTheme === themes.dark ? themes.light : themes.dark
+    })
     setIsSun(prevIsSun=>!prevIsSun)
     
   }
@@ -51,7 +59,7 @@ export default function Navbar(){
             </button>
 
         </ul>
-        <button class="hamburger" aria-label="toggle mobile menu" onClick={()=>toggleMenu()}>
+        <button className="hamburger" aria-label="toggle mobile menu" onClick={()=>toggleMenu()}>
             <svg id="ex" height="30" width="30">
                 <line className={isMenuOpen ? "ex top one" : "ex top"} x1="3" y1="15" x2="27" y2="15"  />
                 <line className={isMenuOpen ? "ex two" : "ex"} x1="3" y1="15" x2="27" y2="15" />

@@ -1,10 +1,10 @@
 import React from "react"
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
 import Links from '../components/links'
 
 
 function Contact (){
-  ReactGA.pageview('/contact')
+  ReactGA.send({ hitType: "pageview", page: "/contact"});
     return( 
       <section className="primary-section">
         <div className="text-tile">

@@ -1,8 +1,8 @@
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
 import ProjectListContainer from "../containers/projectListContainer"
 
 function Projects(){
-    ReactGA.pageview('/projects')
+    ReactGA.send({ hitType: "pageview", page: "/projects"});
     return (
         <>
         <h1 className="screen-reader-text">Projects</h1>

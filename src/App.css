@@ -165,6 +165,9 @@ nav a::before {
 a:hover::before {
   transform: scaleX(1);
 }
+button .theme-switch {
+  transition: all 1s ease-in-out;
+}
 button:hover .theme-switch,
 button:focus-visible .theme-switch {
   animation: rotate 2s linear forwards infinite;
