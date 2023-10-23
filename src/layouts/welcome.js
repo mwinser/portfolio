@@ -1,11 +1,11 @@
 import React from "react"
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
 import Links from "../components/links";
 import ProfilePic from "../components/profilePic";
 
 
 function Welcome (){
-  ReactGA.pageview('/')
+  ReactGA.send({ hitType: "pageview", page: "/"});
     return( 
     <section className="primary-section">
       <div id="profile-container" >
