@@ -165,11 +165,11 @@ nav a::before {
 a:hover::before {
   transform: scaleX(1);
 }
-button .theme-switch {
+button .theme-switch svg {
   transition: all 1s ease-in-out;
 }
-button:hover .theme-switch,
-button:focus-visible .theme-switch {
+button:hover .theme-switch svg,
+button:focus-visible .theme-switch svg{
   animation: rotate 2s linear forwards infinite;
 }
 @keyframes rotate {
@@ -184,7 +184,7 @@ nav .hamburger {
     display: flex;
     place-content: center;
     font-size: 1.5rem;
-    padding: .75rem;
+    padding: 2rem;
     z-index: 2;
     cursor: pointer;
 }
@@ -222,15 +222,21 @@ nav ul {
     width: 50%;
     background: var(--project-tile);
     margin: 0;
-    padding-left: 0;
+    padding: 2rem;
+    border-radius: 0 0 0 0.5rem;
     opacity: 0;
+    display: flex;
+    gap: 2rem;
     flex-direction: column;
+    align-items: flex-start;
     z-index: 2;
-    transition: all .5s;
+    transition: transform .5s;
 }
 nav ul.nav-open{
   transform: translateX(0);
-    opacity: 1;
+  opacity: 1;
+  box-shadow: 0 0 5px rgba(0,0,0, .12);
+  transition: transform .5s;
 
 
 
@@ -244,7 +250,6 @@ nav ul i {
 nav ul li {
     font-size: 1.5rem;
     width: 100%;
-    margin: 1em;
     display: grid;
     align-items: center;
 }
@@ -454,6 +459,10 @@ nav ul {
     background: none;
     display: flex;
     flex-direction: row;
+    gap: 2rem;
+    margin-right: 2rem;
+    justify-content: space-around;
+    align-items: center;
     font-size: .5rem;
     transform: translateX(0);
     opacity: 1;
@@ -461,19 +470,18 @@ nav ul {
 }
 nav ul.nav-open{
     display: flex;
+    box-shadow: none;
 }
 nav ul li {
     width: auto;
     font-size: 1.2rem;
-    margin: 0 1rem 0 0;
+    margin: 0;
 }
 nav .hamburger {
     display: none;
 }
 
-a:hover::before {
-  transform: scaleX(.9);
-}
+
 
 }
 
@@ -489,14 +497,14 @@ a:hover::before {
   .text-tile{
     font-size: 1.4rem;
   }
+  nav ul {
+    gap: 4rem;
+  }
   nav ul li {
     font-size: 1.5rem;
-    margin: 0 4rem 0 0;
+    margin: 0;
   }
 
-  a:hover::before {
-    transform: scaleX(.65);
-  }
 
   .project-desc p {
     font-size: 1rem;

@@ -4,13 +4,13 @@ import React, {useState} from "react";
 export const themes = {
     light: {
       foreground: '#4c4c4c',
-      middle: '#bbbbbb',
+      middle: '#949494',
       background: '#eeeeee',
       projectTile: '#ffffff',
     },
     dark: {
       foreground: '#ffffff',
-      middle: '#555555',
+      middle: '#bdbdbd',
       background: 'linear-gradient(#0f0e26, #004d9c)',
       projectTile: 'rgba(15,14,38,1)',
     },
