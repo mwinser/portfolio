@@ -13,30 +13,35 @@ const projectData = [
         description:"Multipage agency site with CMS, and complex GSAP animations",
         image: fourteenfour,
         link:"https://www.14four.com/",
+        techStack: ["HTML", "CSS", "JavaScript", "GSAP", "Prismic (CMS)"]
     },
     {
-        name:"Affinius Capital (USAA Real Estate)",
+        name:"Affinius Capital (USAA Real Estate)",
         description:"Multipage investment company site with fully custom component-based Wordpress CMS.",
         image: affinius,
         link:"https://affiniuscapital.com/",
+        techStack: ["HTML", "CSS", "JavaScript", "PHP", "WordPress (Custom Theme)"]
     },
     {
         name:"Better with Pepsi",
         description:"Side scrolling sweepstakes site with animations, hotspots and Spotify integration ",
         image: pepsi,
         link:"https://mot-062-better-with-pepsi.still.14four.com/" ,
+        techStack: ["HTML", "CSS", "JavaScript", "GSAP", "Nuxt", "Spotify API"]
     },
     {
-        name:"AT&T Annihlator Cup 2022‑2023",
+        name:"AT&T Annihlator Cup 2022‑2025",
         description:"Multipage event site with CMS, realtime leaderboards, and time-based content",
         image: annihilator,
         link:"https://attannihilatorcup.com/" ,
+        techStack: ["HTML", "CSS", "JavaScript", "Nuxt", "Prismic (CMS)"]
     },
     {
         name:"MiracleGro Sweepstakes",
         description:"Single page sweepstakes site with custom slider, animations, and form validation",
         image: micracleGro,
         link:"https://sct-001-miracle-gro-escape-kit.still.14four.com/" ,
+        techStack: ["HTML", "CSS", "JavaScript", "Nuxt","GSAP"]
     },
     {
         name:"Improv App",
@@ -45,6 +50,7 @@ const projectData = [
         link:"https://bdt-improv.netlify.app/" ,
         git: "https://github.com/mwinser/Improv-Suggestion-App",
         personal: true,
+        techStack: ["HTML", "CSS", "JavaScript"]
     },
     {
         name:"Tumblr Clone",
@@ -53,6 +59,7 @@ const projectData = [
         link:"https://bumblr.netlify.app/",
         git: "https://github.com/mwinser/tumblr-clone",
         personal: true,
+        techStack: ["React", "Tailwind CSS", "Firebase (Auth & Firestore)"]
     },
     {
         name:"Improv Playlist Manager",
@@ -61,6 +68,7 @@ const projectData = [
         link:"https://improv-playlist-manager.netlify.app/",
         git: "https://github.com/mwinser/improv-playlist-manager",
         personal: true,
+        techStack: ["Gatsby", "React", "GraphQL", "Google Sheets API"]
     },
 ]
 
