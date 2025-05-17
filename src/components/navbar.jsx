@@ -1,15 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faMoon, faSun} from '@fortawesome/free-solid-svg-icons'
+// import { faMoon, faSun} from '@fortawesome/free-solid-svg-icons'
 import React, {useState, useEffect, useContext} from "react"
 import {Link, useLocation} from 'react-router-dom'
 import * as ROUTES from '../constants/routes'
-import { themes, ThemeContext } from "../context/themeContext"
+// import { themes, ThemeContext } from "../context/themeContext"
 import ReactGA from 'react-ga4'
 
 export default function Navbar(){
   
-  const [theme, setTheme] = useContext(ThemeContext)
-  const [isSun, setIsSun] = useState(true)
+  // const [theme, setTheme] = useContext(ThemeContext)
+  // const [isSun, setIsSun] = useState(true)
     
   const [isMenuOpen, setIsMenuOpen]= useState(false)
   const location = useLocation()
@@ -17,6 +17,7 @@ export default function Navbar(){
   function toggleMenu() {
     setIsMenuOpen(prevIsMenuOpen=>!prevIsMenuOpen)
   }
+  /*
   function toggleTheme() {
     setTheme(prevTheme=> {
       ReactGA.event({
@@ -29,9 +30,11 @@ export default function Navbar(){
     setIsSun(prevIsSun=>!prevIsSun)
     
   }
+  */
 
   //close menu if url changes
   useEffect(()=>{setIsMenuOpen(false)},[location])
+  /*
   useEffect(()=>{
     window.root.style.setProperty('--foreground', theme.foreground)
     window.root.style.setProperty('--middle', theme.middle)
@@ -40,11 +43,13 @@ export default function Navbar(){
     window.root.style.setProperty('--project-tile', theme.projectTile)
     window.root.style.setProperty('--text', theme.text)
   }, [theme])
+  */
 
     
     
     return(
-    <nav style={{color: theme.foreground}}>
+    // <nav style={{color: theme.foreground}}>
+    <nav>
 
         <ul className= {isMenuOpen ? 'nav-open': null}>
             <Link to={ROUTES.WELCOME}><li className={location.pathname===ROUTES.WELCOME? 'current' : null}>Welcome</li></Link>
@@ -52,11 +57,11 @@ export default function Navbar(){
             <Link to={ROUTES.ABOUT}><li className={location.pathname===ROUTES.ABOUT? 'current' : null}>About</li></Link>
             <Link to={ROUTES.CONTACT}><li className={location.pathname===ROUTES.CONTACT? 'current' : null}>Contact</li></Link>
 
-            <button aria-label="dark/light theme toggle" onClick={()=>{toggleTheme(); return toggleMenu()}}>
+            {/* <button aria-label="dark/light theme toggle" onClick={()=>{toggleTheme(); return toggleMenu()}}>
               <li className="theme-switch"> 
                 <FontAwesomeIcon icon={isSun ? faSun : faMoon}/>
               </li>
-            </button>
+            </button> */}
 
         </ul>
         <button className="hamburger" aria-label="toggle mobile menu" onClick={()=>toggleMenu()}>

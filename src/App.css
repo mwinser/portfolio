@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-
+@import './assets/css/reset.css';
 :root {
   /* Professional Base & Text */
   --foreground-rgb: 48, 58, 64; /* Dark Charcoal for text */
@@ -32,7 +32,6 @@
   --middle: #bbb; /* Consider replacing with a new neutral */
   --project-tile: var(--card-background-darker); /* Map old var to new concept */
 }
-
 * {box-sizing: border-box}
 
 html, body{
@@ -167,7 +166,7 @@ a:hover {
     transform: translate(-120vw, 120vh) rotate(215deg) ;
   }
 }
-*/
+ */
 @keyframes bounce {
   0% {
     transform: rotate(18deg);
@@ -202,11 +201,17 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
 }
+.projects-section h1{
+  color: white;
+}
 
 .projects-intro {
   text-align: center;
   margin-bottom: 2rem;
   color: #f0f0f0; /* Lighter text for intro on dark bg */
+}
+.projects-intro h2{
+  color: white;
 }
 .projects-intro p {
   font-size: 1.1rem;
@@ -416,10 +421,13 @@ nav .hamburger {
     padding: 2rem;
     z-index: 2;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 
 .ex {
-  stroke:var(--foreground);
+  stroke:white;
   stroke-width:3;
   stroke-linecap: round;
   transition: transform ease-in-out .5s;
@@ -449,7 +457,7 @@ nav ul {
     right: 0;
     transform: translateX(300px);
     width: 50%;
-    background: rgba(var(--background-end-rgb), 0.9); /* Dark, slightly transparent bg for dropdown */
+    background: rgb(var(--background-end-rgb)); /* Dark, slightly transparent bg for dropdown */
     margin: 0;
     padding: 2rem;
     border-radius: 0 0 0 0.5rem;
@@ -460,7 +468,7 @@ nav ul {
     align-items: flex-start;
     z-index: 2;
     transition: transform .5s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    /* box-shadow: 0 5px 15px rgba(0,0,0,0.2); */
 }
 nav ul.nav-open{
   transform: translateX(0);
