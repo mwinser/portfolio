@@ -1,60 +1,134 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import './assets/css/reset.css';
 :root {
-  --foreground: white;
-  --middle: #bbb;
-  --background: linear-gradient(#0f0e26, #004d9c);
-  --project-tile: rgba(15,14,38,1);
-}
+  /* Professional Base & Text */
+  --foreground-rgb: 48, 58, 64; /* Dark Charcoal for text */
+  --foreground: rgb(var(--foreground-rgb));
+  --background-start-rgb: 26, 35, 126; /* Dark Indigo */
+  --background-end-rgb: 13, 18, 63; /* Darker Indigo */
+  --background-gradient: linear-gradient(135deg, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
 
+  /* Fun Accent */
+  --accent-color-rgb: 0, 188, 212; /* Bright Teal */
+  --accent-color: rgb(var(--accent-color-rgb));
+
+  /* Neutrals & Cards */
+  --card-background-rgb: 255, 255, 255; /* White for cards */
+  --card-background: white; /* CHANGED: Was rgba(var(--card-background-rgb), 0.95), now fully opaque */
+  --card-background-darker: rgba(15,14,38,0.85);
+
+
+  --border-color: rgba(var(--foreground-rgb), 0.2);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* Button Specific */
+  --button-text-color: white;
+  --button-padding: 0.75rem 1.5rem;
+  --button-border-radius: 0.5rem;
+
+  /* Legacy - review and phase out or update */
+  --middle: #bbb; /* Consider replacing with a new neutral */
+  --project-tile: var(--card-background-darker); /* Map old var to new concept */
+}
 * {box-sizing: border-box}
 
 html, body{
-  background-color: white;
-  /*background: url("/src/Dragon-Scales.svg");
-  /* background by SVGBackgrounds.com */
-  font-family: 'Poppins', sans-serif;
+  color: var(--foreground);
+  background-color: rgb(var(--background-start-rgb)); /* Fallback if gradient not supported */
+  font-family: 'Nunito', sans-serif; /* Default to Nunito for body */
   overflow-x: hidden;
   -ms-overflow-style: none;  /* IE no vert scrollbar*/
   scrollbar-width: none;  /* Firefox no vert scrollbar */
   height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 .app-container{
   position: relative;
   height: 100%;
   min-height: 100vh;
-  overflow: hidden;
-
-  background: var(--background);
+  overflow-y: auto; /* Allow vertical scroll for content */
+  overflow-x: hidden;
+  background: var(--background-gradient);
   background-attachment:fixed;
 }
-/*remove vertical scrollbar*/
+/*remove vertical scrollbar visuals (still scrollable)*/
 body::-webkit-scrollbar {
   display: none;
 }
-button {
-  font-family: inherit; 
-  font-size: 100%; 
-  line-height: 1.15;
-  margin: 0; 
-  padding: 0;
-  overflow: visible;
-  text-transform: none;
-  border: unset;
-  color: unset;
-  background-color: unset;
-  cursor: pointer; 
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--foreground); /* Default heading color on dark bg */
+  margin-top: 0;
 }
-.screen-reader-text {
-  position:absolute;
-  left:-10000px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
+h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 1.5rem;}
+h2 { font-size: 2rem; margin-bottom: 1rem; }
+h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: 'Nunito', sans-serif;
+  margin-bottom: 1rem;
 }
+
+a {
+  position: relative;
+  color: var(--accent-color); /* Links use accent color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: rgba(var(--accent-color-rgb), 0.8); /* Slightly desaturate on hover */
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: var(--button-padding);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--button-border-radius);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: var(--button-text-color);
+}
+.btn-primary:hover {
+  background-color: rgba(var(--accent-color-rgb), 0.85);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(var(--accent-color-rgb), 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+.btn-secondary:hover {
+  background-color: rgba(var(--accent-color-rgb), 0.1);
+  color: var(--accent-color); /* Ensure color remains on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(var(--accent-color-rgb), 0.2);
+}
+
+
+/*
 .shower {
   position: absolute;
   top: 0;
@@ -92,6 +166,7 @@ button {
     transform: translate(-120vw, 120vh) rotate(215deg) ;
   }
 }
+ */
 @keyframes bounce {
   0% {
     transform: rotate(18deg);
@@ -120,34 +195,194 @@ button {
   }
 }
 
-p{
-  font-size: 1rem;
-  font-family: 'Nunito', sans-serif;
+/* Project Page Specific Styles */
+.projects-section { /* A wrapper for the whole projects content area */
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-nav{
+.projects-section h1{
+  color: white;
+}
+
+.projects-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #f0f0f0; /* Lighter text for intro on dark bg */
+}
+.projects-intro h2{
+  color: white;
+}
+.projects-intro p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  background-color: rgba(var(--card-background-rgb), 0.1); /* Subtle background */
+  color: #e0e0e0; /* Light text for buttons */
+  border: 1px solid rgba(var(--card-background-rgb), 0.3);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease-out, box-shadow 0.2s ease; /* Added transform and box-shadow transition */
+}
+
+.filter-btn:hover {
+  background-color: rgba(var(--accent-color-rgb), 0.2);
+  color: var(--accent-color);
+  box-shadow: 0 2px 5px rgba(var(--accent-color-rgb), 0.1);
+}
+
+.filter-btn.active {
+  background-color: var(--accent-color);
+  color: var(--button-text-color);
+  border-color: var(--accent-color);
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(var(--accent-color-rgb), 0.3);
+}
+
+.filter-btn:active { /* Style for when the button is being pressed */
+  transform: scale(0.96);
+  background-color: rgba(var(--accent-color-rgb), 0.5); /* Slightly darken active/pressed state */
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2); 
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+@keyframes card-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.project-card {
+  background-color: var(--card-background); /* Uses the now opaque white */
+  color: var(--foreground); /* Text inside card should be dark charcoal */
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* Animation properties */
+  opacity: 0; /* Start hidden for animation */
+  transform: scale(0.95) translateY(20px); /* Initial state for animation */
+  animation: card-appear 0.5s ease-out forwards; /* Apply the animation */
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; /* Keep existing hover transitions */
+  /* The animation 'forwards' will keep the final state, so direct transform/opacity hover transitions might conflict if not managed. 
+     We might need to adjust how hover interacts if it also transforms. For now, let animation handle entrance.*/
+  border: 2px solid transparent; /* Added for hover effect */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out; /* Re-added and include border-color */
+}
+
+.project-card:hover {
+  transform: translateY(-5px) scale(1.01); /* Adjusted: Keep Y translate, slight scale for pop */
+  box-shadow: 0 10px 20px rgba(var(--accent-color-rgb), 0.2); /* Enhanced shadow */
+  border-color: var(--accent-color); /* Added accent border on hover */
+}
+
+.project-card .project-img-container {
+  width: 100%;
+  height: 200px; /* Fixed height for image container */
+  overflow: hidden;
+}
+.project-card .project-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover ensures image fills space, might crop */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Added filter transition */
+}
+.project-card:hover .project-img-container img {
+  transform: scale(1.05);
+  filter: brightness(1.05); /* Added subtle brightness on hover */
+}
+
+.project-card-content {
+  padding: 1.25rem;
+  flex-grow: 1; /* Allows content to fill space if card heights vary */
+  display: flex;
+  flex-direction: column;
+}
+.project-card-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--project-tile); /* Explicitly dark charcoal for headings */
+}
+.project-card-content p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  flex-grow: 1; /* Allows description to take available space */
+  color: rgb(var(--foreground-rgb)); /* UPDATED: Was #555, now consistently var(--foreground) for main paragraph text too */
+}
+
+.project-tech-stack {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  background-color: rgba(var(--accent-color-rgb), 0.1);
+  color: var(--accent-color);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: transform 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out; /* Added transitions */
+}
+.tech-tag:hover {
+  transform: scale(1.08);
+  background-color: rgba(var(--accent-color-rgb), 0.2); /* Slightly more opaque/brighter */
+  color: var(--accent-color); /* Ensure text color remains strong */
+}
+.tech-tag span {
+  pointer-events: none;
+  cursor: default;
+}
+.project-links {
+  margin-top: auto; /* Pushes links to the bottom of the card */
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Ensure nav links are visible on dark background */
+nav {
   width: 100vw;
   display: flex;
   justify-content: flex-end;
-  color: white;
+  color: #f0f0f0; /* Lighter color for nav text elements */
   align-items: flex-end;
   min-height: 4.5rem;
 }
-#titlebar{
-  font-size: 1.5rem;
-  padding: 1rem .5rem 0 2rem;
-
+nav a {
+  color: #f0f0f0; /* Lighter link color for nav */
 }
-
-a {
-  position: relative;
-  color: var(--foreground);
-  text-decoration: none;
+nav a:hover {
+  color: var(--accent-color);
 }
-
-a:hover {
-  color: var(--foreground);
-}
-
 nav a::before {
   content: "";
   position: absolute;
@@ -156,12 +391,11 @@ nav a::before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--foreground);
+  background-color: var(--accent-color); /* Underline with accent */
   transform-origin: left;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
-
 a:hover::before {
   transform: scaleX(1);
 }
@@ -187,10 +421,13 @@ nav .hamburger {
     padding: 2rem;
     z-index: 2;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 
 .ex {
-  stroke:var(--foreground);
+  stroke:white;
   stroke-width:3;
   stroke-linecap: round;
   transition: transform ease-in-out .5s;
@@ -220,7 +457,7 @@ nav ul {
     right: 0;
     transform: translateX(300px);
     width: 50%;
-    background: var(--project-tile);
+    background: rgb(var(--background-end-rgb)); /* Dark, slightly transparent bg for dropdown */
     margin: 0;
     padding: 2rem;
     border-radius: 0 0 0 0.5rem;
@@ -231,15 +468,13 @@ nav ul {
     align-items: flex-start;
     z-index: 2;
     transition: transform .5s;
+    /* box-shadow: 0 5px 15px rgba(0,0,0,0.2); */
 }
 nav ul.nav-open{
   transform: translateX(0);
   opacity: 1;
-  box-shadow: 0 0 5px rgba(0,0,0, .12);
+  box-shadow: none;
   transition: transform .5s;
-
-
-
 }
 nav ul i {
     font-size: 2rem;
@@ -253,24 +488,50 @@ nav ul li {
     display: grid;
     align-items: center;
 }
-.current {
-  color: var(--middle);
+nav ul li a { /* Assuming links are directly in li or need styling */
+    color: #f0f0f0;
 }
-.current:hover {
-  color: var(--foreground);
+nav ul li a:hover,
+nav ul li a.current {
+    color: var(--accent-color);
+}
+nav ul li.current a::before { /* Style for active link underline */
+    background-color: var(--accent-color);
+    transform: scaleX(1);
 }
 
-.primary-section{
+/* Adjustments for .text-tile on dark background */
+.text-tile {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  max-width: 750px;
+  margin: 2em auto;
+  background: #e0e0e0; /* Lighter text if on dark background */
+  color: #4c4c4c; /* Lighter text if on dark background */
+}
+.text-tile h1, .text-tile h2, .text-tile h3 {
+  color: var(--project-tile); /* Brighter headings if on dark background */
+}
+.text-tile a {
+  color: var(--accent-color);
+}
+.text-tile a:hover {
+  color: rgba(var(--accent-color-rgb),0.8);
+}
 
+/* Styles for .primary-section if it's a main content block */
+.primary-section {
   color: #4c4c4c;
   border-radius: 30px;
   padding: 2rem 2rem 0 2rem;
-
   display: flex;
   flex-direction: column;
   place-content: center;
   position: relative;
   z-index: 1;
+  padding: 2rem 1rem; /* Add some padding for spacing */
 }
 
 #links {
@@ -278,79 +539,10 @@ nav ul li {
     padding-top: 2rem;
 }
 
-#projects{
-  font-size: 1em;
-  color: #4c4c4c;
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch;
-  flex-wrap: wrap;
-  gap: 4rem 2rem;
-  max-width: 100rem;
-  margin: 2rem auto 0;
-}
-.project-tile{
-  padding: 0;
-  width: 25%;
-  min-width: 18.75rem;
-  height: min-content;
-  min-height: 22.5%;
-  border-radius: 32px;
-  box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.1);
-  
-  color: var(--foreground);
-  transition: .2s ease-out;
-  position: relative;
-  overflow: hidden;
-  
-}
-.project-tile:hover{
-  transform: translateY(-2%);
-  transition: .5s cubic-bezier(0.4, -0.06, 0.32, 1.6);
-}
-.project-tile-contents {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.project-img {
-  height: 55%;
-  min-height: 12rem;
-  background-size: cover;
-  background-position: center;
-}
-
-.project-desc {
-  height: 45%;
-  min-height: 12rem;
-  padding: 0 1rem;
-  font-size: .9rem;
-  background: var(--project-tile);
-}
-.project-title {
-  font-size: 1.2rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0.5rem;
-
-}
-.project-title h3 {
-  font-size: 1rem;
-  margin: .5rem 0;
-}
-.project-desc p {
-  margin-top: .5rem;
-  font-size: .75rem;
-}
-.project-link-placeholder {
-  width: 19.2px;
-}
-
 #profile-pic {
     background-image: "../Profile.jpg"
 }
+
 .text-tile{
   font-size: 1rem;
   line-height: 1.6rem;
@@ -505,13 +697,6 @@ nav .hamburger {
     margin: 0;
   }
 
-
-  .project-desc p {
-    font-size: 1rem;
-  }
-  .project-title h3 {
-    font-size: 1.1rem;
-  }
   .skills-card h3 {
     font-size: 1.1rem;
   }
