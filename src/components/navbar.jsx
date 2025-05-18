@@ -1,10 +1,10 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 // import { faMoon, faSun} from '@fortawesome/free-solid-svg-icons'
-import React, {useState, useEffect, useContext} from "react"
+import React, {useState, useEffect} from "react"
 import {Link, useLocation} from 'react-router-dom'
 import * as ROUTES from '../constants/routes'
 // import { themes, ThemeContext } from "../context/themeContext"
-import ReactGA from 'react-ga4'
+// import ReactGA from 'react-ga4'
 
 export default function Navbar(){
   
