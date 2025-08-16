@@ -36,13 +36,13 @@ const projectData = [
         link:"https://attannihilatorcup.com/" ,
         techStack: ["HTML", "SCSS", "JavaScript", "Nuxt", "Prismic (CMS)"]
     },
-    {
-        name:"MiracleGro Sweepstakes",
-        description:"Single page sweepstakes site with custom slider, animations, and form validation",
-        image: micracleGro,
-        link:"https://sct-001-miracle-gro-escape-kit.still.14four.com/" ,
-        techStack: ["HTML", "SCSS", "JavaScript", "Nuxt","GSAP"]
-    },
+    // {
+    //     name:"MiracleGro Sweepstakes",
+    //     description:"Single page sweepstakes site with custom slider, animations, and form validation",
+    //     image: micracleGro,
+    //     link:"https://sct-001-miracle-gro-escape-kit.still.14four.com/" ,
+    //     techStack: ["HTML", "SCSS", "JavaScript", "Nuxt","GSAP"]
+    // },
     {
         name:"Improv App",
         description:"A suggestion generator for the Blue Door Theatre using vanilla javascript",
