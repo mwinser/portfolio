@@ -26,7 +26,7 @@ export default function ProjectListContainer({ projects }) { // Expect a 'projec
                         <h3>{project.name}</h3>
                         {project.category && (
                             <div className="project-category">
-                                {'// ' + project.category.toLowerCase()}
+                                {`// ${project.category.toLowerCase()}`}
                             </div>
                         )}
                         <p>{project.description}</p>

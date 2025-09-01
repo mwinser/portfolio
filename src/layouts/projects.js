@@ -240,6 +240,7 @@ function Projects(){
                 <div 
                     className={`custom-dropdown ${isTechDropdownOpen ? 'open' : ''}`}
                     role="combobox"
+                    aria-controls="project-list"
                     aria-expanded={isTechDropdownOpen}
                     aria-haspopup="listbox"
                     aria-label="Tech Stack Filter"
