@@ -195,6 +195,7 @@ function Projects(){
                 <div 
                     className={`custom-dropdown ${isDropdownOpen ? 'open' : ''}`}
                     role="combobox"
+                    aria-controls="project-list"
                     aria-expanded={isDropdownOpen}
                     aria-haspopup="listbox"
                     aria-label="Project Type Filter"
