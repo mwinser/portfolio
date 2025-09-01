@@ -2,7 +2,7 @@
 function SkillsCard(props){
     return (
     <div className="skills-card">
-        <h3>{props.title}</h3>
+        <h2>{props.title}</h2>
         <p>{props.skills}</p>
     </div>);
 }

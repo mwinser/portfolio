@@ -18,11 +18,11 @@ function AboutMe() {
           <p>I love solving problems, learning new things and making stuff, so I seriously love to code.
           </p>
           <div className="flex-cards">
-            <SkillsCard title="Passions" skills="Pixel Perfect Design Implementation, Accessibility, Prompt Engineering"/>
-            <SkillsCard title="Front Skillz" skills="HTML, CSS/SASS, JS, Vue/Nuxt, React, Tailwind, GSAP, Three.js, Babylon.js, Pixi.js"/>
-            <SkillsCard title="Back Skillz" skills="Node, Express, PHP, Firebase, Shopify, Wordpress, Docker"/>
-            <SkillsCard title="CMSs" skills="Prismic, Sanity, Craft, Wordpress(ACF), Webflow"/>
-            <SkillsCard title="Others" skills="Git, NPM, VS Code, GA/GTM, MailChimp, OpenAI API"/>
+            <SkillsCard title="Passions" skills="Pixel Perfect Design Implementation, Accessibility, AI"/>
+            <SkillsCard title="Fronts" skills="HTML, CSS/SASS, JS, Vue/Nuxt, React, Tailwind, GSAP"/>
+            <SkillsCard title="Backs" skills="Node, Python, PHP, Shopify, Wordpress, Docker"/>
+            <SkillsCard title="CMSs" skills="Prismic, Sanity, Craft, Wordpress(ACF), Webflow, Firebase"/>
+            <SkillsCard title="Others" skills="Git, npm, VS Code, GTM, MailChimp, AI"/>
 
           </div>
           </div>

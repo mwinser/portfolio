@@ -24,6 +24,11 @@ export default function ProjectListContainer({ projects }) { // Expect a 'projec
                     </div>
                     <div className="project-card-content">
                         <h3>{project.name}</h3>
+                        {project.category && (
+                            <div className="project-category">
+                                // {project.category.toLowerCase()}
+                            </div>
+                        )}
                         <p>{project.description}</p>
                         {project.techStack && project.techStack.length > 0 && (
                             <div className="project-tech-stack">
