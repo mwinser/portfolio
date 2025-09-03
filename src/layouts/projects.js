@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import ReactGA from 'react-ga4'
 import ProjectListContainer from "../containers/projectListContainer"
-import projectData from '../projectData'; // Import project data here
+import projectData from '../projectData'; 
 
 const FILTER_MAP = {
     ALL: () => true,
@@ -19,12 +19,10 @@ function Projects(){
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [focusedOptionIndex, setFocusedOptionIndex] = useState(-1);
     
-    // Tech stack filter state
     const [activeTechFilter, setActiveTechFilter] = useState('ALL');
     const [isTechDropdownOpen, setIsTechDropdownOpen] = useState(false);
     const [focusedTechOptionIndex, setFocusedTechOptionIndex] = useState(-1);
 
-    // Extract all unique tech skills from projects
     const allTechSkills = useMemo(() => {
         const techMap = new Map();
         projectData.forEach(project => {
@@ -32,7 +30,7 @@ function Projects(){
                 project.techStack.forEach(tech => {
                     const lowerTech = tech.toLowerCase();
                     if (!techMap.has(lowerTech)) {
-                        techMap.set(lowerTech, tech); // Store original casing
+                        techMap.set(lowerTech, tech);
                     }
                 });
             }
@@ -41,7 +39,6 @@ function Projects(){
         return ['ALL', ...uniqueTechs];
     }, []);
 
-    // Apply both filters
     const filteredProjects = useMemo(() => {
         return projectData.filter(project => {
             const categoryMatch = FILTER_MAP[activeFilter](project);
@@ -75,7 +72,6 @@ function Projects(){
             return;
         }
 
-        // Dropdown is open
         switch (e.key) {
             case 'ArrowDown':
                 e.preventDefault();
@@ -116,7 +112,6 @@ function Projects(){
             return;
         }
 
-        // Dropdown is open
         switch (e.key) {
             case 'ArrowDown':
                 e.preventDefault();
@@ -156,7 +151,6 @@ function Projects(){
     };
 
     const handleDropdownBlur = (e) => {
-        // Only close if focus is moving outside the dropdown
         if (!e.currentTarget.contains(e.relatedTarget)) {
             setIsDropdownOpen(false);
             setFocusedOptionIndex(-1);
@@ -164,7 +158,6 @@ function Projects(){
     };
 
     const handleTechDropdownBlur = (e) => {
-        // Only close if focus is moving outside the dropdown
         if (!e.currentTarget.contains(e.relatedTarget)) {
             setIsTechDropdownOpen(false);
             setFocusedTechOptionIndex(-1);
@@ -182,16 +175,15 @@ function Projects(){
     };
 
     return (
-        <section className="projects-section"> {/* Main wrapper for project page content */}
+        <section className="projects-section">
             <h1 className="screen-reader-text">Projects</h1>
             
             <div className="projects-intro">
-                <h2>My Work</h2> {/* Or a more engaging title */}
+                <h2>My Work</h2>
                 <p>Here's a selection of projects where I've turned ideas into reality, showcasing both professional accomplishments and personal explorations.</p>
             </div>
 
             <div className="filter-controls">
-                {/* Category Filter */}
                 <div 
                     className={`custom-dropdown ${isDropdownOpen ? 'open' : ''}`}
                     role="combobox"
@@ -236,7 +228,6 @@ function Projects(){
                     )}
                 </div>
 
-                {/* Tech Stack Filter */}
                 <div 
                     className={`custom-dropdown ${isTechDropdownOpen ? 'open' : ''}`}
                     role="combobox"
@@ -282,7 +273,6 @@ function Projects(){
                 </div>
             </div>
 
-            {/* Render a single ProjectListContainer with the filtered projects */}
             <ProjectListContainer projects={filteredProjects} />
             
         </section>

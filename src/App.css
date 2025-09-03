@@ -2,49 +2,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..900&display=swap');
 @import './assets/css/reset.css';
 :root {
-  /* Professional Base & Text */
-  --foreground-rgb: 48, 58, 64; /* Dark Charcoal for text */
+  --foreground-rgb: 48, 58, 64;
   --foreground: rgb(var(--foreground-rgb));
-  --background-start-rgb: 26, 35, 126; /* Dark Indigo */
-  --background-end-rgb: 13, 18, 63; /* Darker Indigo */
+  --background-start-rgb: 26, 35, 126;
+  --background-end-rgb: 13, 18, 63;
   --background-gradient: linear-gradient(135deg, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
 
-  /* Fun Accent */
-  --accent-color-rgb: 0, 188, 212; /* Bright Teal */
+  --accent-color-rgb: 0, 188, 212;
   --accent-color: rgb(var(--accent-color-rgb));
 
-  /* Neutrals & Cards */
-  --card-background-rgb: 255, 255, 255; /* White for cards */
-  --card-background: white; /* CHANGED: Was rgba(var(--card-background-rgb), 0.95), now fully opaque */
+  --card-background-rgb: 255, 255, 255;
+  --card-background: white;
   --card-background-darker: rgba(15,14,38,0.85);
 
 
   --border-color: rgba(var(--foreground-rgb), 0.2);
   --shadow-color: rgba(0, 0, 0, 0.1);
 
-  /* Button Specific */
   --button-text-color: white;
   --button-padding: 0.75rem 1.5rem;
   --button-border-radius: 0.5rem;
 
-  /* Fonts */
   --font-heading: 'Raleway', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  /* Legacy - review and phase out or update */
-  --middle: #bbb; /* Consider replacing with a new neutral */
-  --project-tile: var(--card-background-darker); /* Map old var to new concept */
+  --middle: #bbb;
+  --project-tile: var(--card-background-darker);
 }
 * {box-sizing: border-box}
 
 html, body{
   color: var(--foreground);
-  background-color: rgb(var(--background-start-rgb)); /* Fallback if gradient not supported */
-  font-family: var(--font-body); /* Default to Space Mono for body */
+  background-color: rgb(var(--background-start-rgb));
+  font-family: var(--font-body);
   font-weight: 300;
   overflow-x: hidden;
-  -ms-overflow-style: none;  /* IE no vert scrollbar*/
-  scrollbar-width: none;  /* Firefox no vert scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -53,21 +47,19 @@ html, body{
   position: relative;
   height: 100%;
   min-height: 100vh;
-  overflow-y: auto; /* Allow vertical scroll for content */
+  overflow-y: auto;
   overflow-x: hidden;
   background: var(--background-gradient);
   background-attachment:fixed;
 }
-/*remove vertical scrollbar visuals (still scrollable)*/
 body::-webkit-scrollbar {
   display: none;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
-  color: var(--foreground); /* Default heading color on dark bg */
+  color: var(--foreground);
   margin-top: 0;
 }
 h1 { font-size: 2.5rem; margin-bottom: 1.5rem;}
@@ -84,17 +76,16 @@ p {
 
 a {
   position: relative;
-  color: var(--accent-color); /* Links use accent color */
+  color: var(--accent-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: rgba(var(--accent-color-rgb), 0.8); /* Slightly desaturate on hover */
+  color: rgba(var(--accent-color-rgb), 0.8);
   text-decoration: underline;
 }
 
-/* Buttons */
 .btn {
   display: inline-block;
   padding: var(--button-padding);
@@ -127,51 +118,12 @@ a:hover {
 }
 .btn-secondary:hover {
   background-color: rgba(var(--accent-color-rgb), 0.1);
-  color: var(--accent-color); /* Ensure color remains on hover */
+  color: var(--accent-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(var(--accent-color-rgb), 0.2);
 }
 
 
-/*
-.shower {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100px;
-  height: 100px;
-  border:3px solid var(--foreground);
-  opacity: .1;
-  animation:  shower 30s linear infinite; 
-  z-index: 0;
-}
-.shower.one {
-  top: -10vh;
-  right: 10vw;
-}
-.shower.two {
-  width: 50px;
-  height: 50px;
-  top: -30vh;
-  right: 50vw;
-  animation-delay: 1.5s;
-}
-.shower.three {
-  width: 30px;
-  height: 30px;
-  top: -40vh;
-  right: -40vw;
-  animation-delay: 3s;
-}
-@keyframes shower {
-  0% {
-    transform: translate(0,0) rotate(18deg) ;
-  }
-  100% {
-    transform: translate(-120vw, 120vh) rotate(215deg) ;
-  }
-}
- */
 @keyframes bounce {
   0% {
     transform: rotate(18deg);
@@ -200,8 +152,7 @@ a:hover {
   }
 }
 
-/* Project Page Specific Styles */
-.projects-section { /* A wrapper for the whole projects content area */
+.projects-section {
   padding: 2rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -213,7 +164,7 @@ a:hover {
 .projects-intro {
   text-align: center;
   margin-bottom: 2rem;
-  color: #f0f0f0; /* Lighter text for intro on dark bg */
+  color: #f0f0f0;
 }
 .projects-intro h2{
   color: white;
@@ -288,12 +239,12 @@ a:hover {
   padding: 0.5rem 1rem;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  background-color: rgba(var(--card-background-rgb), 0.1); /* Subtle background */
-  color: #e0e0e0; /* Light text for buttons */
+  background-color: rgba(var(--card-background-rgb), 0.1);
+  color: #e0e0e0;
   border: 1px solid rgba(var(--card-background-rgb), 0.3);
   border-radius: var(--button-border-radius);
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease-out, box-shadow 0.2s ease; /* Added transform and box-shadow transition */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease-out, box-shadow 0.2s ease;
 }
 
 .filter-btn:hover {
@@ -310,9 +261,9 @@ a:hover {
   box-shadow: 0 2px 8px rgba(var(--accent-color-rgb), 0.3);
 }
 
-.filter-btn:active { /* Style for when the button is being pressed */
+.filter-btn:active {
   transform: scale(0.96);
-  background-color: rgba(var(--accent-color-rgb), 0.5); /* Slightly darken active/pressed state */
+  background-color: rgba(var(--accent-color-rgb), 0.5);
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.2); 
 }
 
@@ -334,45 +285,40 @@ a:hover {
 }
 
 .project-card {
-  background-color: var(--card-background); /* Uses the now opaque white */
-  color: var(--foreground); /* Text inside card should be dark charcoal */
+  background-color: var(--card-background);
+  color: var(--foreground);
   border-radius: 0.75rem;
   box-shadow: 0 5px 15px var(--shadow-color);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  /* Animation properties */
-  opacity: 0; /* Start hidden for animation */
-  transform: scale(0.95) translateY(20px); /* Initial state for animation */
-  animation: card-appear 0.5s ease-out forwards; /* Apply the animation */
-  /* transition: transform 0.3s ease, box-shadow 0.3s ease; /* Keep existing hover transitions */
-  /* The animation 'forwards' will keep the final state, so direct transform/opacity hover transitions might conflict if not managed. 
-     We might need to adjust how hover interacts if it also transforms. For now, let animation handle entrance.*/
-  border: 2px solid transparent; /* Added for hover effect */
-  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out; /* Re-added and include border-color */
+  opacity: 0;
+  transform: scale(0.95) translateY(20px);
+  animation: card-appear 0.5s ease-out forwards;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
 }
 
 .project-card:hover {
-  transform: translateY(-5px) scale(1.01); /* Adjusted: Keep Y translate, slight scale for pop */
-  box-shadow: 0 10px 20px rgba(var(--accent-color-rgb), 0.2); /* Enhanced shadow */
-  border-color: var(--accent-color); /* Added accent border on hover */
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 10px 20px rgba(var(--accent-color-rgb), 0.2);
+  border-color: var(--accent-color);
 }
 
 .project-card .project-img-container {
   width: 100%;
-  height: 200px; /* Fixed height for image container */
+  height: 200px;
   overflow: hidden;
 }
 .project-card .project-img-container img {
   width: 100%;
-  /* height: 100%;  */
-  object-fit: cover; /* Cover ensures image fills space, might crop */
+  object-fit: cover;
   transform-origin: top;
-  transition: transform 0.3s ease, filter 0.3s ease; /* Added filter transition */
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 .project-card:hover .project-img-container img {
   transform: scale(1.05);
-  filter: brightness(1.05); /* Added subtle brightness on hover */
+  filter: brightness(1.05);
 }
 
 .project-category {
@@ -386,20 +332,20 @@ a:hover {
 
 .project-card-content {
   padding: 1.25rem;
-  flex-grow: 1; /* Allows content to fill space if card heights vary */
+  flex-grow: 1; 
   display: flex;
   flex-direction: column;
 }
 .project-card-content h3 {
   font-size: 1.25rem;
   margin-bottom: 0.1rem;
-  color: var(--project-tile); /* Explicitly dark charcoal for headings */
+  color: var(--project-tile); 
 }
 .project-card-content p {
   font-size: 0.9rem;
   margin-bottom: 1rem;
-  flex-grow: 1; /* Allows description to take available space */
-  color: rgb(var(--foreground-rgb)); /* UPDATED: Was #555, now consistently var(--foreground) for main paragraph text too */
+  flex-grow: 1; 
+  color: rgb(var(--foreground-rgb)); 
 }
 
 .project-tech-stack {
@@ -417,34 +363,33 @@ a:hover {
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  transition: transform 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out; /* Added transitions */
+  transition: transform 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out; 
 }
 .tech-tag:hover {
   transform: scale(1.08);
-  background-color: rgba(var(--accent-color-rgb), 0.2); /* Slightly more opaque/brighter */
-  color: var(--accent-color); /* Ensure text color remains strong */
+  background-color: rgba(var(--accent-color-rgb), 0.2); 
+  color: var(--accent-color); 
 }
 .tech-tag span {
   pointer-events: none;
   cursor: default;
 }
 .project-links {
-  margin-top: auto; /* Pushes links to the bottom of the card */
+  margin-top: auto;
   display: flex;
   gap: 0.75rem;
 }
 
-/* Ensure nav links are visible on dark background */
 nav {
   width: 100vw;
   display: flex;
   justify-content: flex-end;
-  color: #f0f0f0; /* Lighter color for nav text elements */
+  color: #f0f0f0;
   align-items: flex-end;
   min-height: 4.5rem;
 }
 nav a {
-  color: #f0f0f0; /* Lighter link color for nav */
+  color: #f0f0f0;
 }
 nav a:hover {
   color: var(--accent-color);
@@ -457,7 +402,7 @@ nav a::before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--accent-color); /* Underline with accent */
+  background-color: var(--accent-color);
   transform-origin: left;
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -523,7 +468,7 @@ nav ul {
     right: 0;
     transform: translateX(300px);
     width: 50%;
-    background: rgb(var(--background-end-rgb)); /* Dark, slightly transparent bg for dropdown */
+    background: rgb(var(--background-end-rgb));
     margin: 0;
     padding: 2rem;
     border-radius: 0 0 0 0.5rem;
@@ -534,7 +479,6 @@ nav ul {
     align-items: flex-start;
     z-index: 2;
     transition: transform .5s;
-    /* box-shadow: 0 5px 15px rgba(0,0,0,0.2); */
 }
 nav ul.nav-open{
   transform: translateX(0);
@@ -554,29 +498,28 @@ nav ul li {
     display: grid;
     align-items: center;
 }
-nav ul li a { /* Assuming links are directly in li or need styling */
+nav ul li a {
     color: #f0f0f0;
 }
 nav ul li a:hover,
 nav ul li a.current {
     color: var(--accent-color);
 }
-nav ul li.current a::before { /* Style for active link underline */
+nav ul li.current a::before {
     background-color: var(--accent-color);
     transform: scaleX(1);
 }
 
-/* Adjustments for .text-tile on dark background */
 .text-tile {
   padding: 2em;
   border-radius: 1rem;
   max-width: 750px;
   margin: 2em auto;
-  background: #e0e0e0; /* Lighter text if on dark background */
-  color: #4c4c4c; /* Lighter text if on dark background */
+  background: #e0e0e0;
+  color: #4c4c4c;
 }
 .text-tile h1, .text-tile h2, .text-tile h3 {
-  color: var(--project-tile); /* Brighter headings if on dark background */
+  color: var(--project-tile);
 }
 .text-tile a {
   color: var(--accent-color);
@@ -592,7 +535,6 @@ nav ul li.current a::before { /* Style for active link underline */
 
 }
 
-/* Styles for .primary-section if it's a main content block */
 .primary-section {
   color: #4c4c4c;
   border-radius: 30px;
@@ -602,7 +544,7 @@ nav ul li.current a::before { /* Style for active link underline */
   place-content: center;
   position: relative;
   z-index: 1;
-  padding: 2rem 1rem; /* Add some padding for spacing */
+  padding: 2rem 1rem;
 }
 
 #links {
@@ -748,7 +690,6 @@ nav .hamburger {
   }
 }
 
-/* Custom Dropdown Styles */
 .custom-dropdown {
   position: relative;
   display: inline-block;

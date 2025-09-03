@@ -19,11 +19,9 @@ export const themes = {
 export const ThemeContext = React.createContext();
 
 const ThemeProvider = (props) => {
-    // this state will be shared with all components 
     const [theme, setTheme] = useState(themes.dark); 
 
     return (
-            // this is the provider providing state
         <ThemeContext.Provider value={[theme, setTheme]}>
             {props.children}
         </ThemeContext.Provider>

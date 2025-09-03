@@ -9,6 +9,7 @@ import albert from "./assets/images/albert-headshot.avif"
 import adamscott from "./assets/images/adamscott.png"
 import wnba from "./assets/images/live.png"
 import pbr from "./assets/images/photochute.webp"
+import realtime from "./assets/images/realtime.gif"
 
 const projectData = [
     {
@@ -36,7 +37,7 @@ const projectData = [
     },
     {
         name:"Philips Norelco Find Your Look",
-        description:"Personal project successfully pitched. AI-powered facial hair preview tool..",
+        description:"Personal project successfully pitched. AI-powered facial hair preview tool.",
         image: adamscott,
         category: "Client Project",
         techStack: ["HTML", "SCSS", "JavaScript", "Nuxt", "Mediapipe", "Stable Diffusion", "AI"]
@@ -73,6 +74,14 @@ const projectData = [
         techStack: ["Google Workspace", "AppScript", "Gemini API", "AI"]
     },
     {
+        name:"Realtime AI Article",
+        description:"Article about AI, edited and rewritten in realtime based on newly published news about AI. Simulated three AI 'agents' to simultaneously edit the article on-screen.",
+        image: realtime,
+        // link:"https://sct-001-miracle-gro-escape-kit.still.14four.com/" ,
+        category: "Internal Project",
+        techStack: ["HTML", "SCSS", "JavaScript", "Nuxt", "AWS", "AI", "Cron Jobs", "Lambda Functions"]
+    },
+    {
         name:"Improv Suggestion App",
         description:"An improv suggestion generator for the Blue Door Theatre using vanilla javascript",
         image:bdt,
@@ -84,13 +93,13 @@ const projectData = [
     },
     {
         name:"Tumblr Clone",
-        description:"A functional clone of Tumblr using React, Tailwind, Firebase Auth and Firestore.",
+        description:"A functional clone of Tumblr including authentication, posting (text and images), comments, following, and liking.",
         image:bumblr,
         link:"https://bumblr.netlify.app/",
         git: "https://github.com/mwinser/tumblr-clone",
         personal: true,
         category: "Personal Project",
-        techStack: ["React", "Tailwind CSS", "Firebase (Auth & Firestore)"]
+        techStack: ["HTML", "JavaScript", "React", "Tailwind CSS", "Firebase"]
     },
     {
         name:"Improv Playlist Manager",

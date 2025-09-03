@@ -11,7 +11,7 @@ function Contact (){
           <h1>Contact</h1>
           <p>Have a question, comment, or interested in hiring me?</p>
           <p> Gmail me at <b>mike.winser</b></p>
-          <p>Or find me at one of the following:</p>
+          <p>Or find me here:</p>
           <Links/>
         </div>
       </section>
