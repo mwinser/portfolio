@@ -81,16 +81,16 @@ const projectData = [
         category: "Internal Project",
         techStack: ["HTML", "SCSS", "JavaScript", "Nuxt", "AWS", "AI", "Cron Jobs", "Lambda Functions"]
     },
-    {
-        name:"Improv Suggestion App",
-        description:"An improv suggestion generator for the Blue Door Theatre using vanilla javascript",
-        image:bdt,
-        link:"https://bdt-improv.netlify.app/" ,
-        git: "https://github.com/mwinser/Improv-Suggestion-App",
-        personal: true,
-        category: "Personal Project",
-        techStack: ["HTML", "CSS", "JavaScript"]
-    },
+    // {
+    //     name:"Improv Suggestion App",
+    //     description:"An improv suggestion generator for the Blue Door Theatre using vanilla javascript",
+    //     image:bdt,
+    //     link:"https://bdt-improv.netlify.app/" ,
+    //     git: "https://github.com/mwinser/Improv-Suggestion-App",
+    //     personal: true,
+    //     category: "Personal Project",
+    //     techStack: ["HTML", "CSS", "JavaScript"]
+    // },
     {
         name:"Tumblr Clone",
         description:"A functional clone of Tumblr including authentication, posting (text and images), comments, following, and liking.",
@@ -101,16 +101,16 @@ const projectData = [
         category: "Personal Project",
         techStack: ["HTML", "JavaScript", "React", "Tailwind CSS", "Firebase"]
     },
-    {
-        name:"Improv Playlist Manager",
-        description:"Gatsby project which creates game playlists for improv shows using Google Sheets as a headless CMS",
-        image: playlist,
-        link:"https://improv-playlist-manager.netlify.app/",
-        git: "https://github.com/mwinser/improv-playlist-manager",
-        personal: true,
-        category: "Personal Project",
-        techStack: ["Gatsby", "React", "Google Sheets API"]
-    },
+    // {
+    //     name:"Improv Playlist Manager",
+    //     description:"Gatsby project which creates game playlists for improv shows using Google Sheets as a headless CMS",
+    //     image: playlist,
+    //     link:"https://improv-playlist-manager.netlify.app/",
+    //     git: "https://github.com/mwinser/improv-playlist-manager",
+    //     personal: true,
+    //     category: "Personal Project",
+    //     techStack: ["Gatsby", "React", "Google Sheets API"]
+    // },
 ]
 
 export default projectData
