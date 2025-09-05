@@ -10,7 +10,7 @@ function Contact (){
         <div className="text-tile">
           <h1>Contact</h1>
           <p>Have a question, comment, or interested in hiring me?</p>
-          <p> Gmail me at <b>mike.winser</b></p>
+          <p> Gmail me at <b>alden.winser</b></p>
           <p>Or find me here:</p>
           <Links/>
         </div>
