@@ -9,6 +9,7 @@ import ReactGA from 'react-ga4'
 
 const Welcome = lazy(()=> import("./layouts/welcome"))
 const Projects = lazy(()=> import("./layouts/projects"))
+const StudioArt = lazy(()=> import("./layouts/studioArt"))
 const AboutMe = lazy(()=> import("./layouts/aboutme"))
 const Contact = lazy(()=> import("./layouts/contact"))
 const Error = lazy(()=> import("./layouts/error"))
@@ -33,6 +34,7 @@ ReactGA.initialize('G-RL5NX1MQCQ');
             <Switch>
               <Route exact path={ROUTES.WELCOME} component={Welcome}/>
               <Route exact path={ROUTES.PROJECTS} component={Projects}/>
+              <Route exact path={ROUTES.STUDIO_ART} component={StudioArt}/>
               <Route exact path={ROUTES.ABOUT} component={AboutMe}/>
               <Route exact path={ROUTES.CONTACT} component={Contact}/>
               <Route path="/" component={Error}/>

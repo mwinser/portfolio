@@ -321,6 +321,21 @@ a:hover {
   filter: brightness(1.05);
 }
 
+/* Studio Art specific overrides */
+.studio-art .project-card .project-img-container {
+  aspect-ratio: 1 / 1;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.studio-art .project-card .project-img-container img {
+  width: 100%;
+  height: auto;
+  transform-origin: center;
+  display: block;
+}
+
 .project-category {
   padding: 0 0 0.5rem 0;
   margin-bottom: 0.5rem;
