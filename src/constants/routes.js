@@ -1,5 +1,5 @@
 export const WELCOME = '/'
 export const PROJECTS = '/projects'
-export const STUDIO_ART = '/studio-art'
+export const STUDIO_ART = '/art'
 export const ABOUT = '/about'
 export const CONTACT = '/contact'

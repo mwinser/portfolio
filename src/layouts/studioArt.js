@@ -3,7 +3,7 @@ import ReactGA from 'react-ga4'
 import artData from '../artData'
 
 function StudioArt(){
-  ReactGA.send({ hitType: "pageview", page: "/studio-art"});
+  ReactGA.send({ hitType: "pageview", page: "/art"});
 
   const sortedArt = useMemo(() => {
     return [...artData].sort((a, b) => new Date(b.date) - new Date(a.date))
