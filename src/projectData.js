@@ -8,6 +8,7 @@ import affinius from "./assets/images/affinius.png"
 import albert from "./assets/images/albert-headshot.avif"
 import adamscott from "./assets/images/adamscott.png"
 import wnba from "./assets/images/live.png"
+import calbee from "./assets/images/calbee.png"
 import pbr from "./assets/images/photochute.webp"
 import realtime from "./assets/images/realtime.gif"
 
@@ -64,6 +65,14 @@ const projectData = [
         link:"https://attannihilatorcup.com/" ,
         category: "Client Project",
         techStack: ["HTML", "SCSS", "JavaScript", "Nuxt", "Prismic (CMS)", "Google Sheets API"]
+    },
+    {
+        name:"Calbee America",
+        description:"Multipage site for international food company with CMS, sliders, product pages.",
+        image: calbee,
+        link:"https://calbeeamerica.com/" ,
+        category: "Client Project",
+        techStack: ["HTML", "SCSS", "JavaScript", "Nuxt", "Prismic (CMS)"]
     },
     {
         name:"Albert, the Scoping Agent",
