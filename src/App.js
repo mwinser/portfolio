@@ -4,6 +4,7 @@ import {Switch, Route} from 'react-router-dom'
 import ThemeProvider from './context/themeContext'
 import * as ROUTES from './constants/routes'
 import Navbar from './components/navbar'
+import Footer from './components/footer'
 import Spinner from './components/spinner'
 import ReactGA from 'react-ga4'
 
@@ -41,6 +42,7 @@ ReactGA.initialize('G-RL5NX1MQCQ');
             </Switch>
           </Suspense>
         </main>
+        <Footer/>
       </div>
     </ThemeProvider>
   )
