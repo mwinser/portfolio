@@ -21,7 +21,7 @@
 
   --button-text-color: white;
   --button-padding: 0.75rem 1.5rem;
-  --button-border-radius: 0.5rem;
+  --button-border-radius: 100vw;
 
   --font-heading: 'Raleway', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -107,7 +107,9 @@ a:hover {
 }
 .btn-primary:hover {
   background-color: rgba(var(--accent-color-rgb), 0.85);
-  transform: translateY(-2px);
+  color: var(--button-text-color);
+  transform: translateY(-1px);
+  text-decoration: none;
   box-shadow: 0 4px 8px rgba(var(--accent-color-rgb), 0.3);
 }
 
@@ -121,6 +123,7 @@ a:hover {
   color: var(--accent-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(var(--accent-color-rgb), 0.2);
+  text-decoration: none;
 }
 
 
@@ -810,6 +813,7 @@ nav .hamburger {
   border-top: 6px solid #e0e0e0;
   transition: border-top-color 0.3s ease, transform 0.2s ease;
   pointer-events: none;
+  z-index: 100;
 }
 
 .custom-dropdown.open .dropdown-arrow {
@@ -818,15 +822,14 @@ nav .hamburger {
 
 .dropdown-options {
   position: absolute;
-  top: 100%;
+  top: 0%;
   left: 0;
   right: 0;
   background-color: var(--card-background);
   border: 1px solid rgba(var(--card-background-rgb), 0.3);
-  border-top: none;
-  border-radius: 0 0 var(--button-border-radius) var(--button-border-radius);
+  border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 99;
   list-style: none;
   margin: 0;
   padding: 0;
