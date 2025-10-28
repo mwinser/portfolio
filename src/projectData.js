@@ -54,7 +54,7 @@ const projectData = [
         name:"Better with Pepsi",
         description:"Side scrolling sweepstakes site with animations, hotspots and Spotify integration ",
         image: pepsi,
-        link:"https://mot-062-better-with-pepsi.still.14four.com/" ,
+        // link:"https://mot-062-better-with-pepsi.still.14four.com/" ,
         category: "Client Project",
         techStack: ["HTML", "SCSS", "JavaScript", "GSAP", "Nuxt", "Spotify API"]
     },
