@@ -105,7 +105,7 @@ const projectData = [
         description:"A functional clone of Tumblr including authentication, posting (text and images), comments, following, and liking.",
         image:bumblr,
         link:"https://bumblr.netlify.app/",
-        git: "https://github.com/mwinser/tumblr-clone",
+        // git: "https://github.com/mwinser/tumblr-clone",
         personal: true,
         category: "Personal Project",
         techStack: ["HTML", "JavaScript", "React", "Tailwind CSS", "Firebase"]

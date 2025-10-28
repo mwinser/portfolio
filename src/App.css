@@ -43,6 +43,9 @@ html, body{
   margin: 0;
   padding: 0;
 }
+main {
+  position: relative;
+}
 .app-container{
   position: relative;
   height: 100%;
@@ -881,3 +884,20 @@ nav .hamburger {
   border-radius: 0 0 var(--button-border-radius) var(--button-border-radius);
 }
 
+.namedrop {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.25rem;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  top: 2rem;
+}
+
+.namedrop .letter {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: min(30vw, 22rem);
+  color: #222;
+}

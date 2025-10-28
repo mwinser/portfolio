@@ -4,6 +4,7 @@ import {Switch, Route} from 'react-router-dom'
 import ThemeProvider from './context/themeContext'
 import * as ROUTES from './constants/routes'
 import Navbar from './components/navbar'
+import Namedrop from './layouts/namedrop'
 import Footer from './components/footer'
 import Spinner from './components/spinner'
 import ReactGA from 'react-ga4'
@@ -24,6 +25,7 @@ ReactGA.initialize('G-RL5NX1MQCQ');
         <div className="shower two"></div>
         <div className="shower three"></div>
         <Navbar/>
+        {/* <Namedrop/> */}
         <main>
           <Suspense fallback = {
             <section className="primary-section">

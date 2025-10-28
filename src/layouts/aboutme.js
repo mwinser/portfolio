@@ -11,7 +11,7 @@ function AboutMe() {
         <ProfilePic/>
         <div className="text-tile">
           <h1>About Me</h1>
-          <p>Hi! I'm a softwaredeveloper and former scientist living in the beautiful Pacific Northwest.
+          <p>Hi! I'm a software developer and former scientist living in the beautiful Pacific Northwest.
           </p>
           <p>Technology moves fast and AI even moreso. Staying on the cutting edge ensures that my clients' projects are built to the highest standards with the best practices available.
           </p>
