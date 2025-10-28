@@ -625,6 +625,8 @@ footer.site-footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 1rem;
+  gap: 1rem;
 }
 
 .primary-section {
@@ -904,4 +906,15 @@ nav .hamburger {
   font-weight: 600;
   font-size: min(30vw, 22rem);
   color: #222;
+}
+
+/* Smooth image reveal */
+.app-container img.image-fade {
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity .3s ease, transform .3s ease;
+}
+.app-container img.image-fade.is-loaded {
+  opacity: 1;
+  transform: none;
 }

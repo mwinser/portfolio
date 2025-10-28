@@ -1,14 +1,14 @@
 import React from "react"
 import ReactGA from 'react-ga4'
 import SkillsCard from "../components/skillsCard"
-import ProfilePic from "../components/profilePic"
+// import ProfilePic from "../components/profilePic"
 
 
 function AboutMe() {
   ReactGA.send({ hitType: "pageview", page: "/about"});
     return(
       <section className="primary-section">
-        <ProfilePic/>
+        {/* <ProfilePic/> */}
         <div className="text-tile">
           <h1>About Me</h1>
           <p>Hi! I'm a software developer and former scientist living in the beautiful Pacific Northwest.

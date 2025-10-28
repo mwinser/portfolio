@@ -1,5 +1,5 @@
 import './App.css';
-import React, {lazy, Suspense} from "react"
+import React, {lazy, Suspense, useEffect} from "react"
 import {Switch, Route} from 'react-router-dom'
 import ThemeProvider from './context/themeContext'
 import * as ROUTES from './constants/routes'
@@ -18,6 +18,39 @@ const Error = lazy(()=> import("./layouts/error"))
 
 function App () {
 ReactGA.initialize('G-RL5NX1MQCQ');
+  useEffect(()=>{
+    const container = document.querySelector('.app-container');
+    if (!container) return;
+
+    const prepareImage = (img)=>{
+      if (!img || img.classList.contains('image-fade')) return;
+      img.classList.add('image-fade');
+      const markLoaded = ()=> img.classList.add('is-loaded');
+      if (img.complete && img.naturalWidth > 0){
+        markLoaded();
+      } else {
+        img.addEventListener('load', markLoaded, { once: true });
+        img.addEventListener('error', markLoaded, { once: true });
+      }
+    };
+
+    container.querySelectorAll('img').forEach(prepareImage);
+
+    const mo = new MutationObserver((mutations)=>{
+      mutations.forEach((m)=>{
+        m.addedNodes && m.addedNodes.forEach((node)=>{
+          if (node.nodeType !== 1) return;
+          if (node.tagName === 'IMG') {
+            prepareImage(node);
+          } else {
+            node.querySelectorAll && node.querySelectorAll('img').forEach(prepareImage);
+          }
+        });
+      });
+    });
+    mo.observe(container, { childList: true, subtree: true });
+    return ()=> mo.disconnect();
+  },[])
   return(
     <ThemeProvider>
       <div className="app-container">

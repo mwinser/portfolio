@@ -9,7 +9,9 @@ function Contact(){
         <div className="text-tile">
           <h1>Contact</h1>
           <p>Have a question, comment, or interested in hiring me?</p>
-          <div className="contact-button"><button className="btn btn-primary"> <a href="mailto:alden.winser+portfolio@gmail.com" target="_blank" rel="noreferrer noopener">Email Alden</a></button></div>
+          <div className="contact-button">
+            <button className="btn btn-primary"> <a href="mailto:alden.winser+portfolio@gmail.com" target="_blank" rel="noreferrer noopener">Email</a></button> 
+            <button className="btn btn-primary"> <a href="https://linkedin.com/in/mwinser" target="_blank" rel="noreferrer noopener">LinkedIn</a></button></div>
         </div>
       </section>
     );
