@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..900&display=swap');
 @import './assets/css/reset.css';
 :root {
   --foreground-rgb: 48, 58, 64;
@@ -23,8 +21,8 @@
   --button-padding: 0.75rem 1.5rem;
   --button-border-radius: 100vw;
 
-  --font-heading: 'Raleway', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Raleway', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
   --middle: #bbb;
   --project-tile: var(--card-background-darker);
@@ -603,13 +601,13 @@ footer.site-footer {
   border-radius: 1rem;
   max-width: 750px;
   margin: 2em auto;
-  background: #e0e0e0;
+  background: var(--card-background);
   color: #4c4c4c;
 }
 .text-tile h1, .text-tile h2, .text-tile h3 {
   color: var(--project-tile);
 }
-.text-tile a {
+/* .text-tile a {
   color: var(--accent-color);
 }
 .text-tile a:hover {
@@ -621,6 +619,12 @@ footer.site-footer {
     color: #4c4c4c;
     text-align: center;
 
+} */
+ .contact-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .primary-section {
