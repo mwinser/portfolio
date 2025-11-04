@@ -15,7 +15,7 @@ import realtime from "./assets/images/realtime.gif"
 const projectData = [
     {
         name:"WNBA Shootout Shot Tracker",
-        description:"In-person fan experience using AI vision to automate scoring in a head-to-head shootout.",
+        description:"In-person fan experience using AI vision to automate scoring in a head-to-head shootout. Live Mediapipe body tracking and Roboflow fine-tuned model for basketball detection.",
         image: wnba,
         category: "Client Project",
         techStack: ["Javascript", "Mediapipe", "Roboflow", "Webhooks", "AI"]
@@ -38,14 +38,14 @@ const projectData = [
     },
     {
         name:"Philips Norelco Find Your Look",
-        description:"Personal project successfully pitched. AI-powered facial hair preview tool.",
+        description:"Personal project successfully pitched. AI-powered facial hair preview tool. Mediapipe face segmentation with Stable Diffusion inpainting.",
         image: adamscott,
         category: "Client Project",
         techStack: ["HTML", "SCSS", "JavaScript", "Nuxt", "Mediapipe", "Stable Diffusion", "AI"]
     },
     {
         name:"Progressive PBR Photobooth",
-        description:"AI Photobooth during Professional Bull Riding tournaments, wherein fans insert themselves into a printable bull-themed marketing images. Created full technical setup, including Mac mini, iPad, and Photoprinter.",
+        description:"AI Photobooth during Professional Bull Riding tournaments, wherein fans insert themselves into a bull-themed, printable marketing images. Created full technical setup, including Mac mini, iPad, and Photoprinter.",
         image: pbr,
         category: "Client Project",
         techStack: ["HTML", "SCSS", "JavaScript", "Python", "Node.js","Nuxt", "Facefusion", "Mediapipe", "AWS", "AI"]
@@ -60,7 +60,7 @@ const projectData = [
     },
     {
         name:"AT&T Annihlator Cup 2022‑2025",
-        description:"Multipage event site with CMS, realtime leaderboards, and time-based content",
+        description:"Multipage event site with CMS, realtime leaderboards, and time-based content. ",
         image: annihilator,
         link:"https://attannihilatorcup.com/" ,
         category: "Client Project",
