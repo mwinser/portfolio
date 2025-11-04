@@ -22,7 +22,7 @@ const projectData = [
     },
     {
         name:"14Four Agency Site",
-        description:"Multipage agency site with CMS, and complex GSAP animations",
+        description:"Multipage agency site with CMS, and complex GSAP animations.",
         image: fourteenfour,
         link:"https://www.14four.com/",
         category: "Client Project",
@@ -52,7 +52,7 @@ const projectData = [
     },
     {
         name:"Better with Pepsi",
-        description:"Side scrolling sweepstakes site with animations, hotspots and Spotify integration ",
+        description:"Side scrolling sweepstakes site with animations, hotspots and Spotify integration.",
         image: pepsi,
         // link:"https://mot-062-better-with-pepsi.still.14four.com/" ,
         category: "Client Project",
@@ -76,7 +76,7 @@ const projectData = [
     },
     {
         name:"Albert, the Scoping Agent",
-        description:"Emailable agent that generates ready-to-use scope docs based on relevant project data, client data and related scope data in Drive. Output includes timelines, costs, questions, recommendations and references used",
+        description:"Emailable agent that generates ready-to-use scope docs based on relevant project data, client data and related scope data in Drive. Output includes timelines, costs, questions, recommendations and references used.",
         image: albert,
         // link:"https://sct-001-miracle-gro-escape-kit.still.14four.com/" ,
         category: "Internal Project",
@@ -101,7 +101,7 @@ const projectData = [
     //     techStack: ["HTML", "CSS", "JavaScript"]
     // },
     {
-        name:"Tumblr Clone",
+        name:"Tumblr Clone (2021)",
         description:"A functional clone of Tumblr including authentication, posting (text and images), comments, following, and liking.",
         image:bumblr,
         link:"https://bumblr.netlify.app/",
